@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!--
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+    -->
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    <h2 class="govuk-heading-l">Prototypes for usability testing</h2>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div>
+    <span class="govuk-caption-m">January 2023</span>
+    <h3 class="govuk-heading-m">Alerts and activity log</h3>
+    <p>Testing how we show users their account activity and alert them to suspicious activity in their account.</p>
+    <p><a href="/activity/index.html">Go to prototype</a></p>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div>
+    <span class="govuk-caption-m">October 2022</span>
+    <h3 class="govuk-heading-m">Childcare and teaching services</h3>
+    <p>Testing the account settings and service dashboard, using the childcare account and teaching services.</p>
+    <p><a href="/childcare/index.html">Go to prototype</a></p>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div>
+      <span class="govuk-caption-m">September 2022</span>
+      <h3 class="govuk-heading-m">Profiles discovery</h3>
+      <p>Talking to participants about multiple accounts and introducing the concept of 'profiles'.</p>
+      <p><a href="/profiles/index.html">Go to prototype</a></p>
+      </div>
+
+  </div>
+</div>
+
+{% endblock %}

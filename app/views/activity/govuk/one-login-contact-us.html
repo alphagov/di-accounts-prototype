@@ -1,0 +1,99 @@
+{% extends "activity/layout.html" %}
+
+{% block pageTitle %}
+GOV.UK One Login: report a problem or give feedback
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/activity/index",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      GOV.UK One Login: report a problem or give feedback
+    </h1>
+
+    <p>
+      Our office hours are 9:30am to 5:30pm, Monday to Friday. We’ll respond to you by email in 2 working days.
+    </p>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            What are you contacting us about?
+          </h2>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about" name="what-are-you-contacting-us-about" type="radio" value="a-problem-creating-a-govuk-one-login">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about">
+              A problem creating a GOV.UK One Login
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about-2" name="what-are-you-contacting-us-about" type="radio" value="a-problem-signing-in-to-your-govuk-one-login">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about-2">
+              A problem signing in to your GOV.UK One Login
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about-3" name="what-are-you-contacting-us-about" type="radio" value="another-problem-using-your-govuk-one-login">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about-3">
+              Another problem using your GOV.UK One Login
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about-4" name="what-are-you-contacting-us-about" type="radio" value="a-problem-proving-your-identity">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about-4">
+              A problem proving your identity
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about-5" name="what-are-you-contacting-us-about" type="radio" value="to-report-activity-in-your-govuk-one-login-that-you-do-not-recognise">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about-5">
+              To report activity in your GOV.UK One Login that you do not recognise
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about-6" name="what-are-you-contacting-us-about" type="radio" value="govuk-email-subscriptions">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about-6">
+              GOV.UK email subscriptions
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="what-are-you-contacting-us-about-7" name="what-are-you-contacting-us-about" type="radio" value="a-suggestion-or-feedback-about-using-your-govuk-one-login">
+            <label class="govuk-label govuk-radios__label" for="what-are-you-contacting-us-about-7">
+              A suggestion or feedback about using your GOV.UK One Login
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "one-login-contact-us-questions",
+      isStartButton: false
+    }) }}
+
+  </div>
+</div>
+{% endblock %}

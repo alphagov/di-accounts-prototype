@@ -1,0 +1,83 @@
+
+{% extends "activity/layout-account.html" %}
+
+{% set showServiceNav = "true" %}
+{% set activeServiceNavItem = "security" %}
+
+{% block pageTitle %}
+  GOV.UK One Login - Security
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+       Security
+      </h1>
+      
+      <p class="govuk-body">You can check how you’ve used your GOV.UK One Login and the devices used to sign in.</p>
+
+      <p class="govuk-body">If you see something you do not recognise, <a href="#" class="govuk-link--no-visited-state">contact us</a>.</p>
+
+      <h2 class="govuk-heading-m">Most recent activity</h2>
+
+      <p class="govuk-body">See when you’ve signed in and how you’ve used your GOV.UK One Login.</p>
+
+      <div class="activity-card">
+        <h3 class="govuk-heading-s">Changed password</h3>
+        <p class="activity-card-date">14 January 2023 at 10:02am (GMT)</p>
+      </div>
+
+      <div class="activity-card">
+        <h3 class="govuk-heading-s">Signed in to Personal tax account</h3>
+        <p class="activity-card-date">14 January 2023 at 9:45am (GMT)</p>
+      </div>
+
+      <div class="activity-card">
+        <h3 class="govuk-heading-s">Failed sign in attempt</h3>
+        <p class="activity-card-date">26 June 2022 at 8:40am (GMT)</p>
+      </div>
+
+      <div class="activity-card">
+        <h3 class="govuk-heading-s">Signed in to Tax your vehicle</h3>
+        <p class="activity-card-date">20 June 2022 at 12:10pm (GMT)</p>
+      </div>
+
+      <p class="govuk-body"><a class="govuk-link" href="#">See all your account activity</a></p>
+
+      <h2 class="govuk-heading-m">Devices</h2>
+
+      <p class="govuk-body">See the devices you’ve used to sign in with your GOV.UK One Login.</p>
+
+      <div class="activity-card--device">
+        <strong class="govuk-tag">
+          Signed in
+        </strong>
+        <h3 class="govuk-heading-s">iPhone, iOS, Safari</h3>
+        <p class="activity-card-location">United Kingdom</p>
+        <p class="activity-card-date">Last signed in:<br>14 January 2023 at 9:25am (GMT)</p>
+      </div>
+
+      <div class="activity-card--device">
+        <strong class="govuk-tag govuk-tag--grey">
+          Signed out
+        </strong>
+        <h3 class="govuk-heading-s">Acer, Windows, Chrome</h3>
+        <p class="activity-card-location">United Kingdom</p>
+        <p class="activity-card-date">Last signed in:<br>4 January 2023 at 11:32pm (GMT)</p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

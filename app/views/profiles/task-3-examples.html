@@ -1,0 +1,38 @@
+{% extends "profiles/layout.html" %}
+
+{% block pageTitle %}
+  Task 3 – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      
+        <h2 class="govuk-heading-m">Image 1</h2>
+
+        <img class="govuk-!-margin-bottom-8" src="/public/images/netflix.png" alt="A screenshot of a Netflix page with the title 'Who's watching?' with set of names and images." width="100%">
+        
+        <h2 class="govuk-heading-m">Image 2</h2>
+
+        <img class="govuk-!-margin-bottom-8" src="/public/images/google.png" alt="A screenshot of a Google page with the title 'Choose an account' with a list of email addresses below." width="100%" style="border:1px solid 	#b1b4b6">
+        
+        {{ govukButton({
+          text: "Continue",
+          href: "task-3-govuk-profiles"
+        }) }}
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

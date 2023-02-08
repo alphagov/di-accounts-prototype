@@ -1,0 +1,130 @@
+{% extends "activity/emails/_inbox-template.html" %}
+
+{% set subjectLine = "Childcare service reminder - confirm your details are up to date" %}
+
+{% block emailBody %}
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      GOV.UK One Login
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        <a href="#">You've proved your identity with GOV.UK One Login</a>
+      </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        17/01/2023<br>9:55am
+      </p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      GOV.UK One Login
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        <a href="new-device.html">A new device was used to sign in to your GOV.UK One Login</a>
+      </p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        17/01/2023<br>9:45am
+      </p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">Google</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Security alert for myemail@gmail.com</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">15/01/2023<br>6:36pm</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">Royal Mail</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Your parcel has been dispatched</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">08/01/2023<br>12:10pm</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">no-reply</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Your return has been received</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">02/01/2023<br>10:06am</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">Argos</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Order confirmation</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">20/12/2022<br>10:06am</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <p class="govuk-body">Virgin Media</p>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body"><a href="#">Your bill is ready</a></p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <p class="govuk-body">19/12/2022<br>10:06am</p>
+    </dd>
+  </div>
+</dl>
+<nav class="govuk-pagination" role="navigation" aria-label="results">
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 4">
+        4
+      </a>
+    </li>
+  </ul>
+  <li class="govuk-pagination__item">
+    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 5">
+      5
+    </a>
+  </li>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg></a>
+  </div>
+</nav>
+
+  {% endblock %}
+  {% block header %}{% endblock %}
+  {% block footer %}{% endblock %}

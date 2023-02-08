@@ -1,0 +1,38 @@
+{% extends "activity/layout.html" %}
+
+{% block pageTitle %}
+  You've successfully proved your identity
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header_mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="saved" method="post" class="form">
+
+        <h1 class="govuk-heading-l">
+          You've successfully proved your identity
+        </h1>
+
+        <p>You can save your proof of identity to your GOV.UK One Login so you can skip these questions next time a service needs to check who you are.</p>
+
+        <p>You’ll be able to see or delete your proof of identity at any time in your GOV.UK One Login.</p>
+
+        <button id="button" class="govuk-button" data-module="govuk-button">Save proof of identity to your GOV.UK One Login</button>
+      </form>
+
+      <a href="../../check-state-pension/index" class="govuk-body govuk-link">Do not save proof of identity and continue to check your State Pension forecast</a>
+
+    </div>
+  </div>
+
+{% endblock %}

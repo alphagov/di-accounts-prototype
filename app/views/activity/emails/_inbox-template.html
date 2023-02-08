@@ -1,0 +1,20 @@
+{% extends "activity/layout.html" %}
+
+{% block content %}
+  <div style="max-width: 600px; margin: 0 auto;">
+    <h1 class="govuk-heading-l">Email inbox <span class="hmrc-notification-badge">2</span></h1>
+    <hr style="border: 0; height: 2px; background: #000000; Margin: 0 0 30px 0;">
+{% block emailBody %}
+
+set this with the emailBody block
+{% endblock %}
+
+<hr style="border: 0; height: 2px; background: #000000; Margin: 60px 0 30px 0;">
+
+    {{ govukButton({
+      text: "Back to tasks",
+      classes: "govuk-button--secondary",
+      href: "/activity/index"
+    }) }}
+
+  {% endblock %}

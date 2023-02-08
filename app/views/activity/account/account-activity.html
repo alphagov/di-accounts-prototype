@@ -1,0 +1,96 @@
+
+{% extends "activity/layout-account.html" %}
+
+{% set showServiceNav = "true" %}
+{% set activeServiceNavItem = "your-details" %}
+
+{% block pageTitle %}
+  GOV.UK One Login - Activity history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<a href="/account/settings-and-security" class="govuk-back-link">Back to settings and security</a>
+
+<h1 class="govuk-heading-l govuk-!-margin-top-4">Activity history</h1>
+
+<p class="govuk-body">If you see something you do not recognise, <span><a href="#">contact us</a></span>.</p>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Changed password 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 January 2023 at 10:02am (GMT)
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Signed in to Personal tax account
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 January 2023 at 9:45am (GMT)
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Failed sign in attempt
+    </dt>
+    <dd class="govuk-summary-list__value">
+      26 June 2022 at 8:40am (GMT)
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Proof of your identity was saved to your GOV.UK One Login
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 January 2023 at 9:47am (GMT)
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Proved your identity with your GOV.UK One Login
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 January 2023 at 9:45am (GMT)
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Signed in to Tax your vehicle
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">20 June 2022 at 12:10pm (GMT)</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Signed in to Register to vote
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">20 April 2022 at 12:35pm (GMT)</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Created your GOV.UK One Login
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">8 February 2022 at 12:10pm (GMT)</p>
+    </dd>
+  </div>
+</dl>
+
+
+{% endblock %}

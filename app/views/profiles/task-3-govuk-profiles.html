@@ -1,0 +1,36 @@
+{% extends "profiles/layout.html" %}
+
+{% block pageTitle %}
+  Task 3 – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/task-3-examples" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+          <h2 class="govuk-heading-m">Image 1</h2>
+
+          <img class="govuk-!-margin-bottom-8 img-profiles" src="/public/images/profiles-1.png" alt=" " width="80%">
+
+          <h2 class="govuk-heading-m">Image 2</h2>
+
+          <img class="govuk-!-margin-bottom-8 img-profiles" src="/public/images/profiles-2.png" alt=" " width="80%">
+
+          {{ govukButton({
+            text: "Continue",
+            href: "end-of-task-3"
+          }) }}
+
+        </div>
+      </div>
+      
+      </main>
+      </div>
+{% endblock %}
+

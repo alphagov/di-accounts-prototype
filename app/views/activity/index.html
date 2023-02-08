@@ -1,0 +1,119 @@
+
+{% extends "activity/layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/">GOV.UK One Login account prototypes</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        GOV.UK User research prototype - January 2023
+      </h1>
+
+
+      <h2 class="govuk-heading-m">Task 1</h2>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Start task 1",
+        href: "/activity/govuk/check-state-pension"
+      }) }}
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Links
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <h3 class="govuk-heading-s">GOV.UK</h3>
+          <ul>
+            <li><a href="/activity/govuk/check-state-pension">Check your State Pension forecast - start page</a></li>
+          </ul>
+          <h3 class="govuk-heading-s">Auth</h3>
+          <ul>
+            <li><a href="/activity/auth/v9/gov-account">You need a GOV.UK One Login to continue</a></li>
+            <li><a href="/activity/auth/v9/create-email">Create account - enter email</a></li>
+            <li><a href="/activity/auth/v9/create-account-exists">You already have a GOV.UK One Login</a></li>
+            <li><a href="/activity/auth/v9/signin-checkphone">Check your phone</a></li>
+          </ul>
+          <h3 class="govuk-heading-s">Prove your identity (PYI)</h3>
+          <ul>
+            <li><a href="/activity/pyi/mvp/start">You've signed in to your GOV.UK One Login</a></li>
+            <li><a href="/activity/pyi/mvp/prove-your-id-2">Prove your identity (introduction)</a></li>
+            <li><a href="/activity/pyi/mvp/passport-details">Enter your details exactly as they appear on your UK passport</a></li>
+            <li><a href="/activity/pyi/mvp/address-manual-current">Enter your address</a></li>
+            <li><a href="/activity/pyi/mvp/address-check">Confirm your details (address history)</a></li>
+            <li><a href="/activity/pyi/mvp/kbv-start">Answer security questions</a></li>
+            <li><a href="/activity/pyi/mvp/kbv-question-1">How much did you borrow when you first took out your mortgage?</a></li>
+            <li><a href="/activity/pyi/mvp/kbv-question-2">How much is your monthly mortgage payment?</a></li>
+            <li><a href="/activity/pyi/mvp/kbv-question-3">When did you open one of your current accounts?</a></li>
+            <li><a href="/activity/pyi/mvp/kbv-question-4">When did you take out your mobile phone contract?</a></li>
+            <li><a href="/activity/pyi/mvp/success">You've successfully proved your identity</a></li>
+            <li><a href="/activity/pyi/mvp/saved">You've saved your proof of identity to your GOV.UK One Login</a></li>
+          </ul>
+          <h3 class="govuk-heading-s">Personal tax account (including Check your State Pension forecast)</h3>
+          <ul>
+            <li><a href="/activity/check-state-pension/">Your State Pension summary</a></li>
+            <li><a href="/activity/pta/">Personal tax account</a></li>
+          </ul>
+          <h3 class="govuk-heading-s">GOV.UK One Login account</h3>
+          <ul>
+            <li><a href="/activity/account/account-home">Your services</a></li>
+            <li><a href="/activity/account/settings-and-security">Settings and security</a></li>
+            <li><a href="/activity/account/change-password-1">Enter your current password (change password journey)</a></li>
+            <li><a href="/activity/account/change-password-2">Enter your new password</a></li>
+            <li><a href="/activity/account/change-password-3">You have changed your password</a></li>
+          </ul>
+        </div>
+      </details>
+
+      <h2 class="govuk-heading-m">Task 2</h2>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Start task 2",
+        href: "emails/inbox"
+      }) }}
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Links
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <h3 class="govuk-heading-s">Emails</h3>
+          <ul>
+            <li><a href="/activity/emails/inbox">Email inbox</a></li>
+            <li><a href="/activity/emails/new-device">New device email</a></li>
+          </ul>
+          <h3 class="govuk-heading-s">Contact form</h3>
+          <ul>
+            <li><a href="/activity/govuk/one-login-contact-us">Report a problem or give feedback</a></li>
+            <li><a href="/activity/govuk/one-login-contact-us-questions">Report activity in your GOV.UK One Login that you do not recognise</a></li>
+          </ul>
+          <h3 class="govuk-heading-s">Account</h3>
+          <ul>
+            <li><a href="/activity/account/settings-and-security">Activity history</a></li>
+            <li><a href="/activity/account/account-home">Your services</a></li>
+            <li><a href="/activity/account/change-password-1">Change password - enter password</a></li>
+            <li><a href="/activity/account/change-password-2">Change password - enter new password</a></li>
+            <li><a href="/activity/account/change-password-3">Change password - success</a></li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "activity/emails/_email-template.html" %}
+
+{% set sender = "GOV.UK One Login (gov.uk.one.login@notifications.service.gov.uk)" %}
+
+{% set subjectLine = "A new device was used to sign in to your GOV.UK One Login" %}
+
+{% set receivedWhen = "27/12/2022 at 9:45am" %}
+
+{% block emailBody %}
+
+<p class="govuk-body">A new device was used to sign in to your GOV.UK One Login.</p>
+
+<p>
+  <span class="govuk-body">Device: </span>Acer, Windows, Chrome
+  <br>
+  <span class="govuk-body">Location: </span>United Kingdom
+  <br>
+  <span class="govuk-body">Date: </span>17 January 2023 at 9:45am
+</p>
+
+<p>If this was you, you do not need to do anything.</p>
+
+<p class="govuk-body">
+  If you did not sign into your GOV.UK One Login from a new device, contact us: <a href="../govuk/one-login-contact-us">https://signin.account.gov.uk/contact-us?referer=reportUnusualActivity</a>
+</p>
+
+<p class="govuk-body">
+  Sign in to your account to see all your GOV.UK One Login activity: <a href="/activity/account/account-activity-filter"> https://signin.home.account.gov.uk/security/activity-history</a>
+</p>
+
+  {% endblock %}
+  {% block header %}{% endblock %}
+  {% block footer %}{% endblock %}

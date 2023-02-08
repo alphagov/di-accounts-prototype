@@ -1,0 +1,262 @@
+
+{% extends "activity/layout-account.html" %}
+
+{% set showServiceNav = "true" %}
+{% set activeServiceNavItem = "your-details" %}
+
+{% block pageTitle %}
+  GOV.UK One Login - Activity history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/activity/account/settings-and-security">Settings and security</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/activity/account/account-activity-filter">Activity history</a>
+        </li>
+      </ol>
+    </div>
+
+  <h1 class="govuk-heading-l govuk-!-margin-top-4">Activity history</h1>
+
+  <p class="govuk-body">If you see something you do not recognise, <span><a href="#">contact us</a></span>.</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-!-font-weight-bold">Filter</p>
+   
+    <!-- FILTER 1-->
+    <div class="govuk-accordion govuk-accordion-filter" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-1">
+              Activity type
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Signing in
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                Changing your sign in details
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                Changing how you get security codes
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                Proving your identity
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-2">
+              Date
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              From
+            </label>
+            <div id="event-name-hint" class="govuk-hint">
+              For example, 2005 or 21/11/2014
+            </div>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              To
+            </label>
+            <div id="event-name-hint" class="govuk-hint">
+              For example, 2005 or 21/11/2014
+            </div>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER 2
+    <div class="govuk-accordion govuk-accordion-filter" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-1">
+              Filter
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <p class="govuk-heading-s">Activity type</p>
+
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Signing in
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                Changing your sign in details
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                Changing how you get security codes
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                Proving your identity
+              </label>
+            </div>
+          </div>
+          <p class="govuk-heading-s">Date</p>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              From
+            </label>
+            <div id="event-name-hint" class="govuk-hint">
+              For example, 2005 or 21/11/2014
+            </div>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              To
+            </label>
+            <div id="event-name-hint" class="govuk-hint">
+              For example, 2005 or 21/11/2014
+            </div>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    -->
+
+  </div>
+  
+  <div class="govuk-grid-column-two-thirds">
+    <dl class="govuk-summary-list">
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Proof of your identity was saved to your GOV.UK One Login</p>
+         <p>Acer, Windows, Chrome, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         17 January 2023 at 9:55am (GMT)
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Proved your identity with your GOV.UK One Login</p>
+         <p>Acer, Windows, Chrome, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         17 January 2023 at 9:55am (GMT)
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Signed in to Check your State Pension forecast</p>
+         <p>Acer, Windows, Chrome, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         17 January 2023 at 9:45am (GMT)
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Signed in to File a self assessment tax return</p>
+         <p>iPhone, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         25 December 2022 at 5:25pm (GMT)
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Failed sign in attempt</p>
+         <p>iPhone, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         26 June 2022 at 8:40am (GMT)
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Signed in to Tax your vehicle</p>
+         <p>iPhone, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         <p class="govuk-body">20 June 2022 at 12:10pm (GMT)</p>
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Signed in to Register to vote</p>
+         <p>iPhone, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         <p class="govuk-body">5 April 2022 at 12:35pm (GMT)</p>
+       </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+       <dt class="govuk-summary-list__key govuk-!-width-one-half">
+         <p class="govuk-!-font-weight-bold">Created your GOV.UK One Login</p>
+         <p>iPhone, United Kingdom</p>
+       </dt>
+       <dd class="govuk-summary-list__value">
+         <p class="govuk-body">8 February 2022 at 12:10pm (GMT)</p>
+       </dd>
+     </div>
+   </dl>
+     </div>
+   
+   </div>   
+
+
+{% endblock %}
