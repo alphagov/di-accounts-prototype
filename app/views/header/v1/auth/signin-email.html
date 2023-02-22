@@ -1,0 +1,41 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+Sign in to your GOV.UK One Login
+{% endblock %}
+
+{% block beforeContent %}
+    <a href="gov-account" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Enter your email address to sign in to GOV.UK One Login
+    </h1>
+
+    <!--
+      This URL would take you to the spinner page
+      /auth/mvp/signin-checking
+    -->
+
+    <form class="form" action="signin-password" method="post">
+
+      <div class="govuk-form-group">
+
+        <input class="govuk-input govuk-!-width-two-thirds" id="email" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <input class="govuk-input" name="signin" type="hidden" value="signin">
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

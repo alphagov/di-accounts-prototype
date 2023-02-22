@@ -1,0 +1,79 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+Enter your password
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="create-email">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">You already have a GOV.UK One Login</h1>
+
+    <p class="govuk-body">There's already a GOV.UK One Login for
+      <strong>{{ data['emailAddress'] or 'your.name@example.com' }}</strong>
+    </p>
+
+    <div class="account-blurb">
+    
+    <h3 class="govuk-heading-m">Services you can use with your GOV.UK One Login</h3>
+    <p>You can use your GOV.UK One Login to access some government services (for example your childcare account or your personal tax account).</p>
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Services you can use with your GOV.UK One Login
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>These are all the services you can use with your GOV.UK One Login:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://www.gov.uk/apply-renew-passport" class="govuk-link--no-visited-state">Apply for a passport</a></li>
+          <li><a href="https://www.gov.uk/pay-dartford-crossing-charge" class="govuk-link--no-visited-state">Dart charge</a></li> 
+          <li><a href="/find-a-lost-teacher-reference-number/start" class="govuk-link--no-visited-state">Find a lost teacher reference number (TRN)</a></li> 
+          <li><a href="https://www.gov.uk/export-control-licence" class="govuk-link--no-visited-state">Licensing for exporting controlled goods (LITE)</a></li> 
+          <li><a href="https://www.gov.uk/personal-tax-account" class="govuk-link--no-visited-state">Personal tax account</a></li> 
+          <li><a href="https://www.gov.uk/recruit-apprentice" class="govuk-link--no-visited-state">Recruit an apprentice</a></li> 
+          <li><a href="https://register-national-professional-qualifications.education.gov.uk/" class="govuk-link--no-visited-state">Register for a National Professional Qualification (NPQ)</a></li>
+          <li><a href="/govuk/childcare-service-start" class="govuk-link--no-visited-state">The childcare service</a></li> 
+        </ul>
+      </div>
+    </details>
+
+    <p>There are some government services that you cannot use with your GOV.UK One Login yet (for example Universal Credit).</p> 
+
+    <p>In the future, you'll be able to use your GOV.UK One Login to access all services on GOV.UK.</p> 
+    
+    </div>
+    
+    <h3 class="govuk-heading-m" >Enter your password</h3>
+
+    <form class="form" action="/activity/auth/v9/signin-checkphone" method="post">
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+
+        <div class="gem-c-show-password" data-module="show-password" data-disable-form-submit-check="false" data-show-text="Show" data-hide-text="Hide" data-show-full-text="Show password" data-hide-full-text="Hide password" data-announce-show="Your password is shown" data-announce-hide="Your password is hidden">
+          <div class="govuk-form-group">
+            <label for="password" class="gem-c-label govuk-label">Enter your password to sign in</label>
+            <div class="gem-c-show-password__input-wrapper">
+              <input name="password[login]" class="gem-c-input govuk-input gem-c-input--with-password govuk-!-width-two-thirds" id="password" type="password" spellcheck="false" autocomplete="off" aria-describedby="password-hint">
+              <span class="govuk-visually-hidden" aria-live="polite">Your password is hidden</span>
+            </div> <!-- /. gem-c-show-password__input-wrapper -->
+          </div> <!-- /. govuk-form-group -->
+        </div> <!-- /. gem-c-show-password -->
+
+      </div>
+
+      <p><a href="#">I've forgotten my password</a></p>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

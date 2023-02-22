@@ -1,0 +1,52 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+  Prove your identity to continue
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header_mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          Prove your identity
+        </h1>
+
+        <p>This takes about 10 to 20 minutes.</p>
+
+        <p>We’ll ask for your current address and passport details.</p>
+
+        <p>We’ll also ask you some security questions only you will know the answer to. You might find it easier to answer these questions if you have information about:        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            your mobile phone contract
+          </li>
+          <li>
+            your bank account
+          </li>
+          <li>
+            any credit cards, loans or mortgages you may have
+          </li>
+        </ul>
+
+        <p>Your proof of identity will be saved to your GOV.UK One Login. This means you can skip the identity questions next time a service needs to check who you are.</p>
+
+      {{ govukButton({
+      text: "Continue",
+      href: "passport-details"
+      }) }}
+
+  </div>
+  </div>
+
+{% endblock %}

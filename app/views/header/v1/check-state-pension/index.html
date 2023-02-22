@@ -1,0 +1,116 @@
+{% extends "../../layouts/layout-check-pension.html" %}
+
+{% block pageTitle %}
+Your State Pension summary
+{% endblock %}
+
+{% block beforeContent %}
+
+  <!-- PTA MENU -->
+  <nav id="secondary-nav" class="hmrc-account-menu" aria-label="Account" data-module="hmrc-account-menu">
+    <a href="/pta/" class="hmrc-account-menu__link hmrc-account-menu__link--home">
+      <span class="hmrc-account-icon hmrc-account-icon--home">
+        Account home</span>
+    </a>
+
+    <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" tabindex="-1" aria-hidden="true" aria-expanded="false">
+      Account menu</a>
+
+    <ul class="hmrc-account-menu__main js-hidden">
+      <li class="hmrc-account-menu__link--back hidden" aria-hidden="true">
+        <a href="#" tabindex="-1" class="hmrc-account-menu__link">
+          Back</a>
+      </li>
+
+      <li>
+        <a href="#messages" class="hmrc-account-menu__link">
+          Messages</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#check-progress" class="hmrc-account-menu__link">
+          Check progress</a>
+      </li>
+
+      <li>
+        <a href="#" class="hmrc-account-menu__link">
+          Settings</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- END PTA MENU -->
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Your State Pension summary</h1>
+    <p class="govuk-caption-l govuk-!-margin-bottom-4">Your Name</p>
+    
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You can get your State Pension on 20 February 20XX
+      </h1>
+      <div class="govuk-panel__body">
+        Your forecast is £X a week, £X a month, £X a year
+      </div>
+    </div>
+
+    <p class="govuk-body">Your forecast</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>is not a guarantee and is based on the current law</li>
+      <li>is based on your National Insurance record up to 5 April 2022</li>
+      <li>assumes that you’ll contribute another 30 years</li>
+      <li>does not include any increase due to inflation</li>
+    </ul>
+    
+    <p class="govuk-body">You currently have XX years on your record and you need at least XX years to get any State Pension.</p>
+
+    <div class="govuk-inset-text">
+      <a class="govuk-link" href="#">If you have lived or worked overseas (opens in new tab)</a>, your time abroad may help you make up the 10 years you need to get any State Pension.
+    </div>
+
+    <h2 class="govuk-heading-m">£X is the most you can get</h2>
+
+    <p class="govuk-body">You cannot improve your forecast any further, unless you choose to put off claiming.</p>
+
+    <p class="govuk-body">If you’re working you may still need to pay National Insurance contributions until 20 February 20XX as they fund other state benefits and the NHS.</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="#">View your National Insurance record</a></p>
+
+    <p class="govuk-body">Your forecast may be different if there are any changes to your National Insurance information. There is more about this in the <a class="govuk-link" href="#">terms and conditions</a>.</p>
+
+    <p class="govuk-body"><a class="govuk-link" href="#">Print your State Pension summary</a></p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+      <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+  
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Get help
+        </h2>
+        <p class="govuk-body">
+          Helpline 0800 731 0181
+        </p>
+        <p class="govuk-body">
+          Textphone 0800 731 0176
+        </p>
+        <p class="govuk-body-s">
+          Monday to Friday: 8:00am to 6:00pm
+        </p>
+      </aside>
+  
+  </div>
+
+ 
+
+</div>
+{% endblock %}
