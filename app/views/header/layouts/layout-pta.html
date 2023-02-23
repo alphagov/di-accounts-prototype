@@ -41,12 +41,16 @@
 {% endblock %}
 
 {% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+
+{% include "../includes/service-header-v1.html" %}
+
+{{ govukHeader({
+  homepageUrl: "../index",
+  serviceName: "Personal tax account",
+  serviceUrl: "#",
+  containerClasses: "govuk-width-container"
+}) }}
+
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

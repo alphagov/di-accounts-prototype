@@ -1,11 +1,7 @@
-{% extends "layouts/layout.html" %}
+{% extends "../../../layouts/layout-pyi.html" %}
 
 {% block pageTitle %}
   You've successfully proved your identity
-{% endblock %}
-
-{% block header %}
-{% include "../_includes/header_mvp.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,12 +16,16 @@
       <form action="../../check-state-pension/index" method="post" class="form">
 
         <h1 class="govuk-heading-l">
-          You've successfully proved your identity
+          You’ve proved your identity, now continue to the service 
         </h1>
 
         <p>Your proof of identity has been saved in your GOV.UK One Login. This means you can skip the identity questions next time a service needs to check who you are.</p>
 
-        <button id="button" class="govuk-button" data-module="govuk-button">Continue to check your State Pension forecast</button>
+        <p>You can now continue to the service you want to use.</p>
+
+        <p>Some of the information you shared when you proved your identity might be used to automatically fill in forms within the service.</p>
+
+        <button id="button" class="govuk-button" data-module="govuk-button">Continue to the service</button>
       </form>
 
       <details class="govuk-details" data-module="govuk-details">
@@ -35,7 +35,7 @@
           </span>
         </summary>
         <div class="govuk-details__text">
-          You can continue to <a href="">check your State Pension forecast</a> later. You’ll be asked to sign with your GOV.UK One Login and use your saved proof of identity to continue.
+          You can continue to the service later. You’ll be asked to sign in with your GOV.UK One Login.
         </div>
       </details>
 

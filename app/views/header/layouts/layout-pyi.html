@@ -41,9 +41,10 @@
 {% endblock %}
 
 {% block header %}
-  {# Set serviceName in config.js. #}
+{% include "../includes/service-header-v1.html" %}
   {{ govukHeader({
-    homepageUrl: "/",
+    homepageUrl: "/header/v1/index",
+    serviceName: "",
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}

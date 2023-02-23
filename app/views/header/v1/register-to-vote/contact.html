@@ -1,5 +1,7 @@
 {% extends "../../layouts/layout-register-to-vote.html" %}
 
+{% set task = "task-2" %}
+
 {% block pageTitle %}
 What is your full name?
 {% endblock %}
@@ -35,7 +37,7 @@ What is your full name?
               <label class="govuk-label" for="contact-by-email">
                 Email address
               </label>
-              <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+              <input class="govuk-input govuk-!-width-two-thirds" id="email" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
             </div>
           </div>
           <div class="govuk-checkboxes__item">

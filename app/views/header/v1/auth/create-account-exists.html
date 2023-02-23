@@ -1,7 +1,7 @@
-{% extends "layouts/layout.html" %}
+{% extends "../../layouts/layout-govuk.html" %}
 
 {% block pageTitle %}
-Enter your password
+You already have a GOV.UK One Login
 {% endblock %}
 
 {% block beforeContent %}
@@ -52,7 +52,7 @@ Enter your password
     
     <h3 class="govuk-heading-m" >Enter your password</h3>
 
-    <form class="form" action="/activity/auth/v9/signin-checkphone" method="post">
+    <form class="form" action="signin-checkphone" method="post">
 
       <div class="govuk-form-group" style="margin-bottom: 15px;">
 

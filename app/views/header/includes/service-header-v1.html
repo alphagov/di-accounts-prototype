@@ -8,12 +8,12 @@
         <nav aria-label="Menu" class="govuk-header__navigation govuk-header__navigation--service-nav">
        
           <ul id="navigation" class="govuk-header__navigation-list service-nav-v1--list">
-            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "your-details" %} govuk-header__navigation-item--active {% endif %}">
-                <a class="govuk-header__link" href="/header/v1/accounts/account-home">
-                Manage your GOV.UK One Login
+            <li class="govuk-header__navigation-item">
+                <a class="govuk-header__link" href="{% if task == "task-2" %}/header/v1/accounts/account-home-2{% else %}/header/v1/accounts/account-home{% endif %}">
+                Your GOV.UK One Login
                 </a>
             </li>
-            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "" %} govuk-header__navigation-item--active {% endif %}">
+            <li class="govuk-header__navigation-item">
                 <a class="govuk-header__link" href="/">
                 Sign out
                 </a>
@@ -43,7 +43,7 @@
           <ul id="navigation-mobile" class="govuk-header__navigation-list" style="display: none;">
             <li class="govuk-header__navigation-item">
                 <a class="govuk-header__link" href="/header/v1/accounts/account-home">
-                  Manage your GOV.UK One Login
+                  Your GOV.UK One Login
                 </a>
             </li>
             <li class="govuk-header__navigation-item">

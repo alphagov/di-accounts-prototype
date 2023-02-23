@@ -1,5 +1,7 @@
 {% extends "../../layouts/layout-register-to-vote.html" %}
 
+{% set task = "task-2" %}
+
 {% block pageTitle %}
 What is your full name?
 {% endblock %}
@@ -17,7 +19,7 @@ What is your full name?
               Name
             </dt>
             <dd class="govuk-summary-list__value">
-              Your Name
+              {{ data['full-name'] or 'Your Name' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -109,7 +111,7 @@ What is your full name?
             </dt>
             <dd class="govuk-summary-list__value">
               By email:
-              example@email.com
+              {{ data['emailAddress'] or 'your.name@email.com' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
