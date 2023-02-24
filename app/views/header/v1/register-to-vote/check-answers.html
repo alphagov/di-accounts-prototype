@@ -32,7 +32,7 @@ What is your full name?
               Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              5 January 1978
+              {{ data['dob-day'] or '10' }} {{ data['dob-month'] or '01' }} {{ data['dob-year'] or '1978' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -58,7 +58,7 @@ What is your full name?
               National insurance number
             </dt>
             <dd class="govuk-summary-list__value">
-              AB12345678
+              {{ data['national-insurance-number'] or 'AB12345678' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -71,7 +71,12 @@ What is your full name?
               Address
             </dt>
             <dd class="govuk-summary-list__value">
-              10 Street<br>Town<br>AB1 2C
+              {{ data['address-line-1'] or '11 Street' }},
+              {{ data['address-line-2'] or '' }} <br> 
+              {{ data['address-town'] or 'Town' }} <br>
+              {{ data['address-postcode'] or 'AB1 2C' }}
+              
+              <!-- 10 Street<br>Town<br>AB1 2C -->
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -110,7 +115,7 @@ What is your full name?
               How should we contact you?
             </dt>
             <dd class="govuk-summary-list__value">
-              By email:
+              By email: <br>
               {{ data['emailAddress'] or 'your.name@email.com' }}
             </dd>
             <dd class="govuk-summary-list__actions">

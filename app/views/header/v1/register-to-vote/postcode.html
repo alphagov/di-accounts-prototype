@@ -11,6 +11,7 @@ What is your address?
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <form action="postal-vote">
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
@@ -44,9 +45,9 @@ What is your address?
     </fieldset>
 
     {{ govukButton({
-      text: "Continue",
-      href: "postal-vote"
+      text: "Continue"
     }) }}
+  </form>
 
 
   </div>
