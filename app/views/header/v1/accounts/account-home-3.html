@@ -2,7 +2,6 @@
 
 {% set showServiceNav = "true" %}
 {% set activeServiceNavItem = "payg-home" %}
-{% set task = "task-2" %}
 
 {% block pageTitle %}
   GOV.UK One Login - Your services
@@ -27,25 +26,9 @@
       <p>
         You’re signed in as <span class="govuk-!-font-weight-bold">{{ data['emailAddress'] or 'your.name@example.com' }}</span> 
       </p>
-      <h2 class="govuk-heading-m">Your accounts</h2>
-
-      <div class="service-card--with-title">
-        <div class="service-card-title">
-          <h3 class="govuk-heading-s"><a href="../check-state-pension/service-pta-home" class="govuk-link--no-visited-state">Personal tax account</a></h3>
-        </div>
-        <div class="service-card-body">
-        <p>See and manage your taxes and state pension.</p>
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p><a href="../check-state-pension/index" class="govuk-link--no-visited-state">Check your state pension forecast</a></p>
-        <p class="service-card-date">Last used: 10th Febuary 2023</p>
-        </div>
-      </div>
-
-      <h2 class="govuk-heading-m govuk-!-margin-top-8">Other services you’ve used</h2>
 
       <div class="service-card--other-task">
-        <p><a href="https://www.gov.uk/register-to-vote" class="govuk-link--no-visited-state">Register to vote</a></p>
-        <p class="service-card-date">Last used: 27th February 2023</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">You’re not using any services with your GOV.UK One Login yet.</p>
       </div>
       
       <div class="account-blurb govuk-!-margin-top-8">
