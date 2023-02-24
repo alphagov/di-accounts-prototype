@@ -19,7 +19,7 @@ Sign in or create a GOV.UK account
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/auth/v9/create-email" method="post" class="form">
+    <form action="/auth/v9/create-email-2" method="post" class="form">
       <h1 class="govuk-heading-l">You need a GOV.UK One Login to continue
         {% if data.prototype['serviceType'] === 'identity' %}
         <!-- to prove your identity -->
@@ -51,7 +51,7 @@ Sign in or create a GOV.UK account
           {{ govukButton({
             text: "Sign in",
             classes: "govuk-button--secondary",
-            href: "signin-email"
+            href: "signin-email-2"
           }) }}
         </div>
         <!--
