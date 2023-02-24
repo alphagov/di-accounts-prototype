@@ -1,7 +1,7 @@
 {% extends "../../layouts/layout-govuk.html" %}
 
 {% block pageTitle %}
-No GOV.UK One Login found
+You do not have a GOV.UK One Login
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,24 +12,55 @@ No GOV.UK One Login found
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">No GOV.UK One Login found</h1>
+    <h1 class="govuk-heading-l">You do not have a GOV.UK One Login</h1>
 
     <p class="govuk-body">There is no GOV.UK One Login for
       <strong>{{ data['emailAddress'] or 'your.name@example.com' }}</strong>
     </p>
 
-    {{ govukInsetText({
-      text: "GOV.UK One Login is new. It does not work with all government accounts or services yet."
-    }) }}
+    <div class="account-blurb govuk-!-margin-top-4">
+    
+      <h3 class="govuk-heading-m">Services you can use with your GOV.UK One Login</h3>
+      <p>GOV.UK One Login is new. At the moment, you can only use it to access some government services (for example Personal tax account).</p>
+      
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Services you can use with GOV.UK One Login
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>You can use GOV.UK One Login with:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="https://www.gov.uk/apply-vehicle-operator-licence" class="govuk-link--no-visited-state">Apply for a vehicle operator licence</a></li>
+            <li><a href="https://www.socialworkengland.org.uk/registration/apply-for-registration/" class="govuk-link--no-visited-state">Apply to become a registered social worker in England</a></li>
+            <li><a href="https://find-a-lost-trn.education.gov.uk/start" class="govuk-link--no-visited-state">Find a lost teacher reference number (TRN)</a></li> 
+            <li><a href="https://www.gov.uk" class="govuk-link--no-visited-state">GOV.UK email subcriptions</a></li>
+            <li><a href="https://www.gov.uk/export-control-licence" class="govuk-link--no-visited-state">Licensing for exporting controlled goods (LITE)</a></li> 
+            <li><a href="https://www.gov.uk/personal-tax-account" class="govuk-link--no-visited-state">Personal tax account</a></li> 
+            <li><a href="https://www.gov.uk/recruit-apprentice" class="govuk-link--no-visited-state">Recruit an apprentice</a></li> 
+            <li><a href="https://register-national-professional-qualifications.education.gov.uk/" class="govuk-link--no-visited-state">Register for a National Professional Qualification (NPQ)</a></li> 
+            <li><a href="https://www.gov.uk/register-to-vote" class="govuk-link--no-visited-state">Register to vote</a></li> 
+            <li><a href="https://www.gov.uk/request-copy-criminal-record" class="govuk-link--no-visited-state">Request a basic DBS check</a></li> 
+            <li><a href="https://www.gov.uk/government/publications/hm-land-registry-sign-your-mortgage-deed" class="govuk-link--no-visited-state">Sign your mortgage deed</a></li> 
+          </ul>
+        </div>
+      </details>
+  
+      <p>GOV.UK One Login does not work with all government accounts and services yet (for example Universal Credit).</p> 
+  
+      <p>In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p> 
+      
+      </div>
 
-    <p>If you’re trying to access your account for a government service, such as Universal Credit or your personal tax account, sign in to your account for that service.</p>
+    <h2 class="govuk-heading-m">Create your GOV.UK One Login</h2>
     
     {{ govukButton({
-      text: "Sign in to a service",
-      href: "https://www.gov.uk/sign-in"
+      text: "Create your GOV.UK One Login",
+      href: "create-email"
     }) }}
 
-    <p class="govuk-body"><a class="govuk-link--no-visited-state" href="signin-email">Try another email address</a></p>
+    <p class="govuk-body"><a class="govuk-link--no-visited-state" href="#">Try another email address</a></p>
 
   </div>
 </div>
