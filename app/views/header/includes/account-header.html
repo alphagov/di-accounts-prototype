@@ -66,12 +66,12 @@
           
           <ul id="navigation-mobile" class="govuk-header__navigation-list" style="display: none;">
             <li class="govuk-header__navigation-item {% if activeServiceNavItem == "payg-home" %} govuk-header__navigation-item--active {% endif %}">
-                <a class="govuk-header__link" href="/account/account-home">
+                <a class="govuk-header__link" href="{% if task == "task-2" %}/header/v1/accounts/account-home-2{% else %}/header/v1/accounts/account-home{% endif %}">
                 Your services
                 </a>               
             </li>
             <li class="govuk-header__navigation-item {% if activeServiceNavItem == "your-details" %} govuk-header__navigation-item--active {% endif %}">
-                <a class="govuk-header__link" href="/account/account-settings">
+                <a class="govuk-header__link" href="{% if task == "task-2" %}/header/v1/accounts/settings-2{% else %}/header/v1/accounts/settings{% endif %}">
                 Settings
                 </a>
             </li>
