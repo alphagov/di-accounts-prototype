@@ -42,14 +42,21 @@
 
 {% block header %}
 
-{% include "../includes/service-header-v1.html" %}
+{% if round == "2" %}
 
+{% include "../includes/service-header-v2.html" %}
+
+{% else %}
+
+{% include "../includes/service-header-v1.html" %}
 {{ govukHeader({
   homepageUrl: "../index",
   serviceName: "Check your state pension forecast",
   serviceUrl: "../../v1/govuk/check-state-pension",
   containerClasses: "govuk-width-container"
 }) }}
+
+{% endif %}
 
 {% endblock %}
 
