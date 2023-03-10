@@ -402,6 +402,10 @@
   float: right;
 }
 
+.govuk-header__navigation--service-nav-v2 {
+  min-height: 50px;
+}
+
 @media only screen and (min-width: 771px){
   .govuk-header--service-nav-v2-mobile {
     display: none;

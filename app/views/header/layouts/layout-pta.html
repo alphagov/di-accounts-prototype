@@ -42,6 +42,12 @@
 
 {% block header %}
 
+{% if round == "2" %}
+
+{% include "../includes/service-header-v2.html" %}
+
+{% else %}
+
 {% include "../includes/service-header-v1.html" %}
 
 {{ govukHeader({
@@ -50,6 +56,8 @@
   serviceUrl: "#",
   containerClasses: "govuk-width-container"
 }) }}
+
+{% endif %}
 
 {% endblock %}
 

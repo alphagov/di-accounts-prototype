@@ -1,0 +1,31 @@
+{% extends "../../layouts/layout-register-to-vote.html" %}
+
+{% set round = "2" %}
+{% set servicename = "Register to vote" %}
+{% set task = "task-2" %}
+{% set showservicenav = "true" %}
+
+{% block pageTitle %}
+What is your full name?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Your application has been received and is being processed
+      </h1>
+      <div class="govuk-panel__body">
+        Your reference number is<br><strong>HDJ2123F</strong>
+      </div>
+    </div>
+    <p class="govuk-body">We have sent you a confirmation email.</p>
+    <p class="govuk-body">Your Electoral Registration Office will email or write to you within 10 days. If an election is taking place in your area, it might take longer. If you need to discuss your application, <a href="#">contact your local Electoral Registration Office (Link opens in a new window)</a>.</p>
+    <p class="govuk-body">You can also find out about <a href="#">what happens next</a></p>
+    <p class="govuk-body"><a href="#">What did vou think of this service? (takes 30 seconds)</a></p>
+  </div>
+</div>
+
+{% endblock %}

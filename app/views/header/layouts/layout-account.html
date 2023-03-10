@@ -43,7 +43,11 @@
 {% endblock %}
 
 {% block header %}
+{% if round == 'round2' %}
+{% include "../includes/account-header-v2.html" %}
+{% else %}
 {% include "../includes/account-header.html" %}
+{% endif %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

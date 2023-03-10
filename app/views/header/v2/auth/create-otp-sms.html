@@ -1,0 +1,51 @@
+{% extends "../../layouts/layout-govuk.html" %}
+
+{% block pageTitle %}
+Enter your mobile phone number
+{% endblock %}
+
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="create-choose-otp-method.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Enter your mobile phone number
+    </h1>
+
+    <p class="govuk-body">We will send a 6 digit security code to the number you give us.</p>
+
+    <form class="form" action="create-check-sms" method="post">
+
+      <div class="govuk-form-group">
+
+        <label class="govuk-label" for="mobileNumber">UK mobile phone number</label>
+
+        <input class="govuk-input govuk-!-width-two-thirds govuk-!-margin-bottom-4" id="mobileNumber" name="mobileNumber" type="tel" spellcheck="false" autocomplete="tel">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  I do not have a UK mobile number
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

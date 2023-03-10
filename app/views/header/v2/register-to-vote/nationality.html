@@ -1,0 +1,67 @@
+{% extends "../../layouts/layout-register-to-vote.html" %}
+
+{% set round = "2" %}
+{% set servicename = "Register to vote" %}
+{% set task = "task-2" %}
+{% set showservicenav = "true" %}
+
+{% block pageTitle %}
+  What is your nationality?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="postcode">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What is your nationality?
+          </h1>
+        </legend>
+        <div id="nationality-hint" class="govuk-hint">
+          Select all options that are relevant to you.
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              British
+            </label>
+            <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+              including English, Scottish, Welsh and Northern Irish
+            </div>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish" {{ checked('nationality','irish') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+              Irish
+            </label>
+            <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+              including from Northern Ireland
+            </div>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+            <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+              Citizen of a different country
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukDetails({
+      summaryText: "Help with nationality",
+      text: "Text"
+    }) }}
+    
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </form>
+  </div>
+</div>
+
+{% endblock %}

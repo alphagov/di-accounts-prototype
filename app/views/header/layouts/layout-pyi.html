@@ -41,6 +41,11 @@
 {% endblock %}
 
 {% block header %}
+{% if task == "id" %}
+
+{% include "../includes/service-header-v2.html" %}
+
+{% else %}
 {% include "../includes/service-header-v1.html" %}
   {{ govukHeader({
     homepageUrl: "/header/v1/index",
@@ -48,6 +53,7 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+{% endif %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

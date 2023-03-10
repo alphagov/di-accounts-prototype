@@ -1,0 +1,23 @@
+{% set html %}
+This is a new service – your
+
+{% if data.prototype['supportEntry'] %}
+<a class="govuk-link" href="{{data.prototype['supportDir']}}/{{data.prototype['supportEntry']}}">feedback</a>
+{% else %}
+<a class="govuk-link" href="">feedback</a>
+{% endif %}
+
+will help us to improve it.
+
+{% endset -%}
+
+<div class="govuk-phase-banner govuk-!-padding-top-4">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
