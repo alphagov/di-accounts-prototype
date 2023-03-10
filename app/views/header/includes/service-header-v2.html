@@ -47,7 +47,7 @@
           {% if task1 %}
           <ul class="govuk-header__navigation-list service-nav-v2--list">
             <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="service-pta-home">
+                <a class="govuk-header__link {% if page == "pta-home" %} govuk-header__navigation-item--active {% endif %}" href="service-pta-home">
                   Personal tax home
                 </a>
             </li>
@@ -63,7 +63,7 @@
           </li>
           <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="../index">
-              Profile and settings
+              Settings
             </a>
         </li>
           </ul>
@@ -150,7 +150,7 @@
         </li>
         <li class="govuk-header__navigation-item">
           <a class="govuk-header__link" href="../index">
-            Profile and settings
+            Settings
           </a>
       </li>
           </ul>
