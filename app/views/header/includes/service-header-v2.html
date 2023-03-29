@@ -146,9 +146,9 @@
           
           <ul id="service-navigation-mobile" class="govuk-header__navigation-list" style="display: none;" hidden>
             <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="{% if task == "task-2" %}/header/v2/accounts/account-home-2{% else %}/header/v2/accounts/account-home{% endif %}">
-                  Personal tax home
-                </a>
+              <a class="govuk-header__link {% if page == "pta-home" %} govuk-header__navigation-item--active {% endif %}" href="service-pta-home">
+                Personal tax home
+              </a>
             </li>
             <li class="govuk-header__navigation-item">
               <a class="govuk-header__link" href="../index">
