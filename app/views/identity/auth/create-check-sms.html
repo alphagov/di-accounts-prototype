@@ -1,0 +1,51 @@
+{% extends "../../layouts/layout-govuk.html" %}
+
+{% block pageTitle %}
+Check your phone
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="create-otp-sms">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="create-success" method="POST">
+    <h1 class="govuk-heading-l">Check your phone</h1>
+
+    <div class="govuk-inset-text">
+      We have sent a code to <span class="govuk-!-font-weight-bold">***** **0457</span>
+    </div>
+
+    <p>It might take a few minutes to arrive. The code will expire after 15 minutes.</p>
+
+      <div class="govuk-form-group">
+
+        <label class="govuk-label" for="otp">Enter the 6 digit security code</label>
+
+        <input class="govuk-input govuk-input--width-5" id="otp" name="create-sms-otp" type="text" autocomplete="one-time-code" inputmode="numeric" spellcheck="false" >
+
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Problems receiving the code
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">We can <a href="">send the code again</a> or you can <a href="">use a different phone number</a>.</p>
+
+          <p class="govuk-body"><a href="create-choose-otp-method">Get a code another way</a></p>
+        </div>
+      </details>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -14,15 +14,17 @@ What is your full name?
     <h1 class="govuk-heading-l">What is your full name?</h1>
 
     <p>Enter your name in full, as it appears on official documents - don't use initials.</p>
-
-    <div class="govuk-form-group">
+    
+    <form action="date-of-birth">
+    
+      <div class="govuk-form-group">
       <label class="govuk-label" for="full-name">
         Full name
       </label>
       <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
     </div>
     
-    <form action="date-of-birth">
+    
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend">
@@ -53,11 +55,9 @@ What is your full name?
         </div>
       </fieldset>
     </div>
-
-    {{ govukButton({
-      text: "Continue"
-    }) }}
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
     </form>
+  
   </div>
 </div>
 

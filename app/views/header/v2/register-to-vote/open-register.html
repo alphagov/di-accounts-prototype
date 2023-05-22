@@ -1,0 +1,48 @@
+{% extends "../../layouts/layout-register-to-vote.html" %}
+
+{% set round = "2" %}
+{% set servicename = "Register to vote" %}
+
+{% set showservicenav = "true" %}
+
+{% block pageTitle %}
+Do you want to opt out of the 'open register'?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Do you want to opt out of the 'open register'?</h1>
+
+    <p>The electoral register lists the name and address of everyone who's registered to vote.</p>
+
+    <p>There are 2 versions of the electoral register - the full version and the 'open register' ('edited register' in Northern Ireland).</p>
+
+    <p>You can opt out of the open register. This is the version of the register that's available to anyone who wants to buy a copy.</p>
+
+    <p>Opting out will not affect your right to vote.</p>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="opt-out" name="opt-out" type="checkbox" value="opt-out">
+            <label class="govuk-label govuk-checkboxes__label" for="opt-out">
+              I do not want my name and address to appear in the open register
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "ni-number"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

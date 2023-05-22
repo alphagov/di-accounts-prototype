@@ -1,0 +1,153 @@
+{% extends "../../layouts/layout-register-to-vote.html" %}
+
+{% set round = "2" %}
+{% set servicename = "Register to vote" %}
+
+{% set showservicenav = "true" %}
+
+{% block pageTitle %}
+What is your full name?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['full-name'] or 'Your Name' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['dob-day'] or '10' }} {{ data['dob-month'] or '01' }} {{ data['dob-year'] or '1978' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Nationality
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nationality'] or 'British' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> Nationality</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National insurance number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['national-insurance-number'] or 'AB12345678' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> national insurance number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['address-line-1'] or '11 Street' }},
+              {{ data['address-line-2'] or '' }} <br> 
+              {{ data['address-town'] or 'Town' }} <br>
+              {{ data['address-postcode'] or 'AB1 2C' }}
+              
+              <!-- 10 Street<br>Town<br>AB1 2C -->
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Open register
+            </dt>
+            <dd class="govuk-summary-list__value">
+              I don't want my name and address on the open register
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> open register</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Postal vote
+            </dt>
+            <dd class="govuk-summary-list__value">
+              I don't want to apply for a postal vote
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> postal vote</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How should we contact you?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              By email: <br>
+              {{ data['emailAddress'] or 'your.name@email.com' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <h2 class="govuk-heading-m">Send your application</h2>
+        <p class="govuk-body">By sending your application you confirm that the information you have provided is true.</p>
+        <p class="govuk-body">Your information may be shared with other government departments to check your identity and that you're entitled to register to vote.</p>
+        <p class="govuk-body">You can also find out more about <a href="#">how we handle your data.</a></p>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            If you knowingly give false information in your application, you could go to prison for up to 6 months, or be fined.
+          </strong>
+        </div>
+        <form action="success" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true">
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and send
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

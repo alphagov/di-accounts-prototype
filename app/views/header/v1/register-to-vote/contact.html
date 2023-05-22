@@ -15,6 +15,7 @@ What is your full name?
 
     <p>Your phone number will only be kept by the Electoral Registration Office of your local council and you will be contacted only if they need further information about your registration. It will not be used for marketing or any other purposes.</p>
 
+    <form action="check-answers">
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -68,9 +69,9 @@ What is your full name?
     </div>
 
     {{ govukButton({
-      text: "Continue",
-      href: "check-answers"
+      text: "Continue"
     }) }}
+  </form>
 
   </div>
 </div>

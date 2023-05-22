@@ -41,6 +41,13 @@
 {% endblock %}
 
 {% block header %}
+
+{% if round == "2" %}
+
+{% include "../includes/service-header-v2.html" %}
+
+{% else %}
+
 {% include "../includes/service-header-v1.html" %}
   {{ govukHeader({
     homepageUrl: "../index",
@@ -48,6 +55,8 @@
     serviceUrl: "../../v1/govuk/register-to-vote-start",
     containerClasses: "govuk-width-container"
   }) }}
+{% endif %}
+
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

@@ -1,0 +1,99 @@
+{% extends "../../layouts/layout-govuk.html" %}
+
+{% block pageTitle %}
+Check your State Pension forecast
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Check your State Pension forecast
+    </h1>
+
+    <p>
+      Use this service to find out:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>how much State Pension you could get</li>
+      <li>when you can get it</li>
+      <li>how to increase it, if you can</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      <p>This page is also <a class="govuk-link" href="#">available in Welsh (Cymraeg)</a>.</p>
+    </div>
+
+    <p>
+      <a class="govuk-link" href="#">The State Pension age is under review</a> and may change in the future.
+    </p>
+
+    <div class="govuk-inset-text">
+      <p>You cannot use this service if you’re already getting your State Pension or if you’ve delayed (‘deferred’) claiming it.</p>
+    </div>
+
+    <p>
+      To use this service, you’ll need to prove your identity using GOV.UK One Login. You’ll be able to create a GOV.UK One Login if you do not already have one.
+    </p>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Start now",
+        href: "/header/v2/auth/gov-account",
+        isStartButton: true
+      }) }}
+ 
+    <h2 class="govuk-heading-m">
+      Other ways to apply
+    </h2>
+
+    <p>
+      Applying online is the quickest way to get a forecast. If you’ll reach your <a class="govuk-link" href="#">State Pension age</a> in more than 30 days you can also:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        fill in the <a class="govuk-link" href="#">BR19 application form</a> and send it by post
+      </li>
+      <li>
+        call the <a class="govuk-link" href="#">Future Pension Centre</a> who will post the forecast to you
+      </li>
+    </ul>
+
+    <h3 class="govuk-heading-m">
+      If you’re already getting your State Pension or have delayed claiming it
+    </h3>
+
+    <p>
+      To get information about your State Pension, contact the <a class="govuk-link" href="#">Pension Service</a> if you’re in the UK or the <a class="govuk-link" href="#">International Pension Centre</a> if you live abroad.
+    </p>
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Part of
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link govuk-!-font-weight-bold" href="#">
+              Plan your retirement income: step by step
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+{% endblock %}

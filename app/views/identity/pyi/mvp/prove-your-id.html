@@ -1,0 +1,55 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+  Prove your identity to continue
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          Prove your identity with GOV.UK One Login
+        </h1>
+
+        <p>It will take you about 10 minutes to prove your identity this way.</p>
+
+        <div class="govuk-inset-text">
+          <p>This guide is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+        </div>
+
+       <p>You’ll need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            a GOV.UK One Login - we’ll ask you to sign in or create one when you continue
+          </li>
+          <li>
+            your photo ID
+          </li>
+          <li>
+            your current home address (you might also need your previous address if you’ve recently moved)
+          </li>
+        </ul>
+
+        <p>We’ll use the information you give us to make sure that you are who you say you are. The information will be saved to your GOV.UK One Login so you will not need to provide it again.</p>
+
+{{ govukButton({
+  text: "Continue",
+  href: "../../auth/gov-account"
+}) }}
+
+    </div>
+  </div>
+
+{% endblock %}

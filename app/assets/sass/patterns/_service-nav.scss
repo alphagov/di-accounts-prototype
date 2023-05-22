@@ -42,6 +42,9 @@
     }
     .govuk-header__navigation-item a {
       color: govuk-colour("blue");
+      &:focus {
+        color: govuk-colour("black");
+      }
     }
 
     .govuk-header__navigation-item--active a {
@@ -64,6 +67,9 @@
       &:before {
         // this is horrible but I'm trying to make the service nav toggle work for UR without adding any new JS in addition to DS layout header stuff
         content: "Menu";
+      }
+      &:focus {
+        color: govuk-colour("black");
       }
       &--open {
         &:before {
