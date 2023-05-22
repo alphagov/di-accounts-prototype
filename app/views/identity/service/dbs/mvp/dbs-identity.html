@@ -1,0 +1,39 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+Apply for a basic DBS check
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../../../pyi/mvp/prove-your-id" method="post">
+
+      <h1 class="govuk-heading-l">Prove your identity</h1>
+
+      <p>To apply for a basic DBS check, you need to first prove your identity.</p>
+
+      <p>You can do this by signing into or creating a GOV.UK One Login.</p>
+
+      <p>Your basic DBS check results will only show the name on your identity document.</p>
+
+      <input class="govuk-input" id="optin" name="optin" type="hidden" value="yes">
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+
+</div>
+{% endblock %}

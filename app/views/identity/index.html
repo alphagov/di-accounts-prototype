@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">GOV.UK One Login usability prototype</h1>
+
+<h2 class="govuk-heading-l">Task 1</h2>
+
+{{ govukButton({
+  text: "Start",
+  href: "/identity/govuk/dbs-service-start.html"
+}) }}
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Links
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <a href="">link</a>
+  </div>
+</details>
+
+<h2 class="govuk-heading-l">Task 2</h2>
+
+{{ govukButton({
+  text: "Start"
+}) }}
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Links
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <a href="">link</a>
+  </div>
+</details>
+
+{% endblock %}
