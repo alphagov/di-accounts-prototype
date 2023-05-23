@@ -23,9 +23,9 @@ Parameters:
   ApplicationName:
     Type: String
     Default: di-acc-prototype
-  # DomainName:
-  #   Type: String
-  #   Default: account.prototype.dev.account.gov.uk
+  DomainName:
+    Type: String
+    Default: account-prototype.dev.account.gov.uk
   SourceTagValue:
     Description: "Github respository for the prototype source template.yaml. See: https://gds-way.cloudapps.digital/manuals/aws-tagging.html"
     Type: String
@@ -307,7 +307,7 @@ Resources:
         - Type: "redirect"
           RedirectConfig:
             Protocol: "HTTPS"
-            Port: 443
+            Port: "443"
             Host: "#{host}"
             Path: "/#{path}"
             Query: "#{query}"
@@ -316,37 +316,44 @@ Resources:
       Port: 80
       Protocol: HTTP
 
-  # HTTPSLoadBalancerListener:
-  #   Type: AWS::ElasticLoadBalancingV2::Listener
-  #   Properties:
-  #     DefaultActions:
-  #       - TargetGroupArn: !Ref TargetGroup
-  #         Type: forward
-  #     LoadBalancerArn: !Ref LoadBalancer
-  #     Port: 443
-  #     Protocol: HTTPS
-  #     Certificates:
-  #       - CertificateArn: !Ref HTTPSCertificate
+  HTTPSLoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref HTTPSCertificate
 
-  # HTTPSCertificate:
-  #   Type: AWS::CertificateManager::Certificate
-  #   Properties:
-  #     DomainName: !Ref DomainName
-  #     DomainValidationOptions:
-  #       - DomainName: !Ref DomainName
-  #         HostedZoneId:
-  #           Fn::ImportValue:
-  #             Fn::Sub: "${VpcStackName}-PrototypeRoute53"
-  #     ValidationMethod: DNS
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      HostedZoneConfig:
+        Comment: "Hosted zone config for test prototype"
+      Name: !Ref DomainName
+      VPCs:
+        - VPCId:
+            Fn::ImportValue: !Sub "${VpcStackName}-VpcId"
+          VPCRegion: "eu-west-2"
 
-  # DNSRecord:
-  #   Type: AWS::Route53::RecordSet
-  #   Properties:
-  #     Name: !Ref DomainName
-  #     ResourceRecords:
-  #       - !GetAtt LoadBalancer.DNSName
-  #     HostedZoneId:
-  #       Fn::ImportValue:
-  #         Fn::Sub: "${VpcStackName}-PrototypeRoute53"
-  #     Type: CNAME
-  #     TTL: 3000
+  HTTPSCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref DomainName
+      DomainValidationOptions:
+        - DomainName: !Ref DomainName
+          HostedZoneId: !Ref HostedZone
+      ValidationMethod: DNS
+
+  DNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      Name: !Ref DomainName
+      ResourceRecords:
+        - !GetAtt LoadBalancer.DNSName
+      HostedZoneId: !Ref HostedZone
+      Type: CNAME
+      TTL: "3000"
