@@ -29,8 +29,12 @@ Sign in to your GOV.UK One Login
 
       </div>
 
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
-      <input class="govuk-input" name="signin" type="hidden" value="signin">
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href: "/identity/auth/signin-password.html"
+        }) }}
+      </div>
 
     </form>
 

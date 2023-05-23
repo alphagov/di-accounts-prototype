@@ -1,0 +1,63 @@
+{% extends "childcare/layout.html" %}
+
+{% block pageTitle %}
+Personal tax account: sign in or set up
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Dealing with HMRC</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Set up your personal tax account
+    </h1>
+
+    <p>Personal tax account needs to check who you are.</p>
+
+    <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+      <p>You’ll need to either:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>prove your identity with GOV.UK One Login</li>
+        <li>share your saved identity information (if you’ve proved your identity with GOV.UK One Login before)</li>
+      </ul>
+
+      <p>You’ll also need to provide your National Insurance number.</p>
+
+      {{ govukButton({
+        text: "Continue",
+        href: ""
+      }) }}
+  
+
+      </div>
+          </div>
+  
+        </div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+
+
+  </div>
+</div>
+{% endblock %}
