@@ -37,7 +37,12 @@ Check your phone
         </div>
       </details>
 
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href: "/identity/service/pta/pta-setup.html"
+        }) }}
+      </div>
 
     </form>
 
