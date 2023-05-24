@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Are you sure you want to update your information now?
+    </h1>
+
+    <p>You’ll need to contact the GOV.UK One Login team using an online form. </p>
+    <p>They will delete your identity information and you’ll need to prove your identity again. </p>
+    <p>This process may take up to 5 working days.</p>
+
+      {{ govukButton({
+        text: "Yes, update this information now",
+        href: "/identity/service/pta/what-is-your-ni.html"
+      }) }}
+
+      <div>
+        <h3 class="govuk-heading-s">
+          If you need to use the service now
+        </h3>
+    
+        <p>You can continue to use the service with your saved information.</p>
+        <p>GOV.UK One Login can still confirm your identity to the service. </p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Continue to the service without updating your information</a>.</p>
+    
+      </div>
+  
+          </div>
+  
+        </div>
+{% endblock %}
+
