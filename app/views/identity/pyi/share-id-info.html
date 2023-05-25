@@ -5,15 +5,16 @@ Share your saved identity information
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
   <div class="summary-list-container">
     <h1 class="govuk-heading-l">Share your saved identity information </h1>
     <p class="govuk-body">You proved your identity with GOV.UK One Login on 3 May 2023.</p>
     <p>This will be shared with <span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
   
   <div class="id-info">
-    <h3 class="govuk-heading-s ">Identity information that will be shared </h3>
+    <h3 class="govuk-heading-m ">Identity information that will be shared </h3>
     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -29,7 +30,7 @@ Share your saved identity information
           Name on your passport 
         </dt>
         <dd class="govuk-summary-list__value">
-          Jane B
+          Your name
         </dd>
       </div>
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
@@ -38,18 +39,51 @@ Share your saved identity information
         </dt>
         <dd class="govuk-summary-list__value">
           <p>Current address</p>
-          <p>72 Guild Street<br>London<br>SE23 6FH</p>
-          <p>Current address</p>
-          <p>72 Guild Street<br>London<br>SE23 6FH</p>
-          
+          <p>1 Street<br>Bristol<br>BS5 6LA</p>
+          <p>Previous address 1</p>
+          <p>2 Street<br>Bristol<br>BS5 6LA</p>
+          <p>Previous address 2</p>
+          <p>3 Street<br>Bristol<br>BS5 6LA</p>
+
         </dd>
       </div>
     </dl>
-
-
+  </div>
+  <br>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-heading-m">
+          Do you want to continue with this information?
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+            Yes, share this information with Personal tax account
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            No, contact the GOV.UK One Login team to update this information
+          </label>
+          <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            Your information will be deleted and you’ll need to prove your identity again.
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+  <div>
 
   </div>
-
+  <div>
+    {{ govukButton({
+      text: "Continue",
+      href: "/identity/pyi/update-info-q.html"
+    }) }}
   </div>
 </div>
 
