@@ -25,24 +25,30 @@ Personal tax account: sign in or set up
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      Set up your personal tax account
+      What is your National Insurance number?
     </h1>
 
-    <p>Personal tax account needs to check who you are.</p>
+    <div class="govuk-form-group">
+      <div id="event-name-hint" class="govuk-hint">
+        Example: QQ 12 34 56 C
+      </div>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+    </div>
 
-    <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
-      <p>You’ll need to either:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>prove your identity with GOV.UK One Login</li>
-        <li>share your saved identity information (if you’ve proved your identity with GOV.UK One Login before)</li>
-      </ul>
-
-      <p>You’ll also need to provide your National Insurance number.</p>
+    <div><details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I don’t know my National Insurance number
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      </div>
+    </details></div>
 
       {{ govukButton({
         text: "Continue",
-        href: "/identity/pyi/share-id-info.html"
+        href: "/identity/service/pta/service-pta-home.html"
       }) }}
   
 

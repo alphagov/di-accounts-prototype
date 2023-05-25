@@ -6,6 +6,14 @@
 Create a GOV.UK One Login or sign in
 {% endblock %}
 
+{% block header %}
+{# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+  {% endblock %}
 
 {% block beforeContent %}
   {% if data['use-govuk-account'] %}
