@@ -8,93 +8,47 @@ Share your saved identity information
 
 <div class="govuk-grid-row">
   <div class="summary-list-container">
-
     <h1 class="govuk-heading-l">Share your saved identity information </h1>
-
-    <form action="full-name">
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="national-insurance-number">
-        You proved your identity with GOV.UK One Login on 3 May 2023.
-      </label>
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
+    <p class="govuk-body">You proved your identity with GOV.UK One Login on 3 May 2023.</p>
+    <p>This will be shared with <span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
+  
+  <div class="id-info">
+    <h3 class="govuk-heading-s ">Identity information that will be shared </h3>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10 October 1970
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name on your passport 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Jane B
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Current address</p>
+          <p>72 Guild Street<br>London<br>SE23 6FH</p>
+          <p>Current address</p>
+          <p>72 Guild Street<br>London<br>SE23 6FH</p>
           
-          <h2 class="govuk-heading-m">Identity information that will be shared </h2>
-        </div>
-        <div class="govuk-summary-card__content">
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Date of birth
-              </dt>
-              <dd class="govuk-summary-list__value">
-                10 October 1970
-              </dd>
-              <dd class="govuk-summary-list__actions">
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Name on your passport 
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Jane B
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Address
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Part time – less than 30 hours a week
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                
-              </dd>
-            </div>
-          </dl>
-        </div>
+        </dd>
       </div>
-      
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h2 class="govuk-heading-m">
-              Do you want to continue with this information?
-            </h2>
-          </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-                Yes, share this information with Personal tax account
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                No, contact the GOV.UK One Login team to update this information
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Your information will be deleted and you’ll need to prove your identity again.              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+    </dl>
 
-      <div>
-        {{ govukButton({
-          text: "Continue",
-          href: "/identity/pyi/update-info-q.html",
-          isContinueButton: true
-        }) }}
-      
+
+
   </div>
-    
-  </form>
 
   </div>
 </div>
