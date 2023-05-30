@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Share your saved identity information 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container">
+    <h1 class="govuk-heading-l">How would you like to prove your identity? </h1>
+  </div>
+  
+  <div>
+  <p>This takes about 10 to 20 minutes.</p>
+  <p>We’ll ask you for your current address and passport details.</p>
+  <p>We’ll also ask you some security questions only you will know the answer to. You might find it easier to answer these questions if you have information about:</p>
+  </div>
+
+<div>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>your mobile phone contract</li>
+    <li>your bank account</li>
+    <li>any credit cards, loans or mortgages you may have</li>
+  </ul></div>
+  <div>
+    {{ govukButton({
+      text: "Continue",
+      href: "/identity/pyi/pyi-online.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}
