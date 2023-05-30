@@ -1,0 +1,113 @@
+{% extends "childcare/layout.html" %}
+
+{% block pageTitle %}
+Request a basic DBS check
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Sign in to your GOV.UK One Login
+    </h1>
+
+    <p class="govuk-body">Contents:</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">About GOV.UK One Login </a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/identity/govuk/signin-to-onelogin-future-2.html">How to prove your identity with GOV.UK One Login</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Change your details or delete your GOV.UK One Login</a>
+      </li>
+    </ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <div>
+      <h1 class="govuk-heading-l">About GOV.UK One Login</h1>
+      <p class="govuk-body">GOV.UK One Login is new. It is a first step towards creating a single place where you can:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>access all services on GOV.UK</li>
+  <li>prove your identity to any government service that needs to check who you are</li>
+</ul>
+    </div>
+      <br>
+    <div>
+      <h2 class="govuk-heading-m">
+        Services you can use with GOV.UK One Login 
+      </h2>
+
+      <p class="govuk-body">GOV.UK One Login is new. It is a first step towards creating a single place where you can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a class="govuk-link" href="#">Apply for a vehicle operator licence</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Apply to become a registered social worker in England</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Find a lost teacher reference number (TRN)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">GOV.UK email subscriptions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">LITE (Licensing for International Trade and Enterprise)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Personal tax account</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Recruit an apprentice</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Register for a National Professional Qualification (NPQ)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Register to vote</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Request a basic DBS check</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Sign your mortgage deed</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-inset-text">
+      <p>If you’re looking for a different service,<a href="">sign in to another government account.</a>.</p>
+    </div>
+
+    <h2 class="govuk-heading-m">Sign in to your GOV.UK One Login</h2>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Sign in",
+  href: "/identity/auth/gov-account-3.html",
+  isStartButton: true
+}) }}
+
+
+  
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+
