@@ -37,7 +37,7 @@ Share your saved identity information
           Name on your passport 
         </dt>
         <dd class="govuk-summary-list__value">
-          Your name
+          {{ data['first-name'] or 'Firstname' }} {{ data['middle-names'] }} {{ data['surname'] or 'Surname' }}
         </dd>
       </div>
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border">

@@ -72,7 +72,7 @@
           Passport details
         </dt>
         <dd class="govuk-summary-list__value">
-          <p>Name:<br> Jane B</p>
+          <p>Name:<br> {{ data['first-name'] or 'Firstname' }} {{ data['middle-names'] }} {{ data['surname'] or 'Surname' }}</p>
           <p>Passport number:<br> 123456789</p>
           <p>Country:<br> UK</p>
           <p>Expiry date:<br> 27 May 2028</p>
