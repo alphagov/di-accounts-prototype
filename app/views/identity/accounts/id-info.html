@@ -1,0 +1,102 @@
+{% extends "../../layouts/layout-account.html" %}
+
+{% set showServiceNav = "true" %}
+{% set activeServiceNavItem = "your-details" %}
+{% set round = "round2" %}
+
+{% block pageTitle %}
+  GOV.UK One Login - Identity information
+{% endblock %}
+
+{% block header %}
+{% include "includes/account-header-identity.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Security</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Identity information</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Your identity information</h1>
+
+    <p class="govuk-body">You’ve proved your identity with GOV.UK One Login.</p>
+
+    <p>GOV.UK One Login will share your identity information next time you use a service that needs to check who you are.</p>
+
+    <p>Services might also use your information to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        automatically fill in forms within the service
+      </li>
+      <li>
+        communicate with you
+      </li>
+      <li>
+        match you against their records
+      </li>
+    </ul>
+
+  <div class="id-info">
+    <h3 class="govuk-heading-m ">Identity information saved in your GOV.K One Login</h3>
+    <p>You proved your identity with this information on 3 May 2023.</p>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10 October 1970
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Passport details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Name:<br> Jane B</p>
+          <p>Passport number:<br> 123456789</p>
+          <p>Country:<br> UK</p>
+          <p>Expiry date:<br> 27 May 2028</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Current address</p>
+          <p>1 Street<br>Bristol<br>BS5 6LA</p>
+          <p>Previous address 1</p>
+          <p>2 Street<br>Bristol<br>BS5 6LA</p>
+          <p>Previous address 2</p>
+          <p>3 Street<br>Bristol<br>BS5 6LA</p>
+
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <br>
+  <p>If your identity information has changed, <a href="#">contact the GOV.UK One Login team to update it</a>. Your information will be deleted and you’ll need to prove your identity again.</p>
+
+</div>
+
+{% endblock %}
