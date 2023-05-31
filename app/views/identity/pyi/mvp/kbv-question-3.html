@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouts/layout.html" %}
 
 {% block pageTitle %}
 {{ question }}
@@ -9,7 +9,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "../../_includes/phase-banner.html" %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -22,7 +31,7 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              When did you open one of your current accounts?
+              When did you open your current account?
             </h1>
           </legend>
           <div id="changed-name-hint" class="govuk-hint">

@@ -14,7 +14,10 @@ You have successfully created your GOV.UK account
 
         <p class="govuk-body">Now continue to prove your identity.</p>
 
-        <button id="button" class="govuk-button" data-module="govuk-button">Continue</button>
+        {{ govukButton({
+          text: "Continue",
+          href: "/identity/pyi/how-to-pyi.html"
+        }) }}
       </form>
 
     </div>

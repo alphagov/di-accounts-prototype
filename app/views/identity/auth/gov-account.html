@@ -20,27 +20,18 @@ Sign in or create a GOV.UK account
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form action="/auth/v9/create-email" method="post" class="form">
-      <h1 class="govuk-heading-l">You need a GOV.UK One Login to continue
-        {% if data.prototype['serviceType'] === 'identity' %}
-        <!-- to prove your identity -->
-        {% elif data.prototype['serviceType'] === 'save' %}
-        to save your progress
-        {% elif data.prototype['serviceType'] === 'account' %}
-        <!-- to create your account -->
-        {% endif %}
-      </h1>
 
-      <p>You can use your GOV.UK One Login to access some government services.<p>
-
-      <p>In the future, you'll be able to use it with all services on GOV.UK.<p>
-
-      <h3 class="govuk-heading-m">Create your GOV.UK One Login or sign in</h3>
+      <h1 class="govuk-heading-xl">Create your GOV.UK One Login or sign in</h1>
 
       <p>You'll need:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>an email address</li>
         <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
       </ul>
+
+      <div class="govuk-inset-text">
+        <p>GOV.UK One Login is also available <a href="">Welsh (Cymraeg)</a>.</p>
+      </div>
 
         <div class="govuk-button-group">
           {{ govukButton({
@@ -54,6 +45,18 @@ Sign in or create a GOV.UK account
             href: "signin-email"
           }) }}
         </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              About GOV.UK One Login
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>GOV.UK One Login is new. At the moment you can only use it to access some government services (for example, Personal tax account).</p>
+            <p>GOV.UK One Login does not work with all government accounts or services yet (for example Universal Credit). </p>
+            <p>In the future, you’ll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+          </div>
+        </details>
         <!--
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
