@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouts/layout.html" %}
 
 {% block pageTitle %}
 Enter your details exactly as they appear on your UK passport
@@ -9,7 +9,17 @@ Enter your details exactly as they appear on your UK passport
 {% endblock %}
 
 {% block beforeContent %}
-  {% include "../../_includes/phase-banner.html" %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
   <a class="govuk-back-link" href="start">Back</a>
 {% endblock %}
 
@@ -22,7 +32,7 @@ Enter your details exactly as they appear on your UK passport
 <!--        <span class="govuk-caption-l">Step 1 of 3</span>-->
         Enter your details exactly as they appear on your UK passport</h1>
 
-      <form class="form" action="/pyi/mvp/address-manual-current" method="post">
+      <form class="form" action="address-manual-current" method="post">
 
         <p>Your passport includes a lot of information that we can check to make sure that you are who you say you are.</p>
 
