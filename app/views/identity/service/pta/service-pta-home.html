@@ -1,5 +1,10 @@
 {% extends "childcare/layout.html" %}
 
+{% set showservicenav = "true" %}
+
+{% block header %}
+{% include "includes/service-header-pta.html" %}
+{% endblock %}
 
 {% block pageTitle %}
 Personal tax account - Home
