@@ -20,7 +20,7 @@
          
         <ul class="govuk-header__navigation-list govuk-header__navigation-list-v2">
           <li class="govuk-header__navigation-item govuk-header__navigation-item-v2">
-            <a class="govuk-header__link" href="{% if task == "task-2" %}/header/v2/accounts/account-home-2{% elif task == "id" %}/header/v2/accounts/account-home-3{% else %}/header/v2/accounts/account-home{% endif %}">
+            <a class="govuk-header__link" href="/identity/accounts/account-home">
               GOV.UK One Login
             </a>
             <svg class="person-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -115,7 +115,7 @@
         </button>
         <div>
           <ul id="account-navigation-mobile" class="govuk-header__navigation-list" style="display: none;" hidden>
-            <li class="govuk-header__navigation-item"><a href="{% if task == "task-2" %}/header/v2/accounts/account-home-2{% elif task == "id" %}/header/v2/accounts/account-home-3{% else %}/header/v2/accounts/account-home{% endif %}" class="govuk-header__link">GOV.UK One Login</a></li>
+            <li class="govuk-header__navigation-item"><a href="/identity/accounts/account-home" class="govuk-header__link">GOV.UK One Login</a></li>
             <li class="govuk-header__navigation-item"><a href="#" class="govuk-header__link">Sign out</a></li>
           </ul>
         </div>
