@@ -18,7 +18,7 @@ Personal tax account - Home
   <div class="govuk-grid-column-two-thirds">
 
     <header class="hmrc-page-heading">
-      <h1 class="govuk-heading-xl">Your Name</h1>
+      <h1 class="govuk-heading-xl">{{ data['first-name'] or 'Firstname' }} {{ data['middle-names'] }} {{ data['surname'] or 'Surname' }}</h1>
       <p class="hmrc-caption govuk-caption-xl"><span class="govuk-visually-hidden">This section is </span>Account home</p>
     </header>
 
