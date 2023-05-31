@@ -5,6 +5,7 @@ Apply for a basic DBS check
 {% endblock %}
 
 {% block beforeContent %}
+
 {{ govukPhaseBanner({
   tag: {
     text: "beta"
@@ -14,9 +15,11 @@ Apply for a basic DBS check
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
 
+<div class="govuk-grid-row">
+  
+  <div class="govuk-grid-column-two-thirds">
+  
     <form action="../../../pyi/mvp/prove-your-id" method="post">
 
       <h1 class="govuk-heading-l">Prove your identity</h1>

@@ -1,0 +1,62 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+{{ question }}
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header_mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="kbv-question-2" method="post">
+
+        <h1 class="govuk-heading-l">You’ve proved your identity, now continue to the service</h1>
+
+        <div class="ccms-loader ccms-loader__fast govuk-!-margin-bottom-6"></div>
+  
+        <p>Your identity information has been saved to your GOV.UK One Login. This means you can skip this step next time a service needs to check who you are.</p>
+        <p>You can now continue to the service you want to use. </p>
+        <p>Your identity information has been saved to your GOV.UK One Login. This means you can skip this step next time a service needs to check who you are.
+
+          You can now continue to the service you want to use. 
+          
+          Some of the information you shared when you proved your identity might be used to automatically fill in forms within the service.</p>
+  
+        <input class="govuk-input" id="cra-complete" name="errorcode" type="hidden" value="pyi-kbv-fail">
+  
+        <button id="button2" class="govuk-button govuk-!-margin-top-4 govuk-visually-hidden" data-module="govuk-button">Continue</button>
+      </form>
+
+        <br>
+        <a href="/identity/pyi/mvp/returning-to-dbs.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Continue to the service
+        </a>
+
+      </form>
+    </div>
+  </div>
+
+{% if data['devMode'] === 'true' %}
+  {# DEVMODE SCENARIOS #}
+  {% include "../_includes/devmode_kbvs-2.html" %}
+{% endif %}
+
+{% endblock %}

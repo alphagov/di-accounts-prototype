@@ -1,0 +1,42 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+{{ question }}
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header_mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="kbv-question-2" method="post">
+
+        <h1 class="govuk-heading-l">Returning you to ‘Request a basic DBS check’</h1>
+
+      </form>
+    </div>
+  </div>
+
+{% if data['devMode'] === 'true' %}
+  {# DEVMODE SCENARIOS #}
+  {% include "../_includes/devmode_kbvs-2.html" %}
+{% endif %}
+
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouts/layout.html" %}
 
 {% block pageTitle %}
 {{ question }}
@@ -9,7 +9,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "../../_includes/phase-banner.html" %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -71,7 +80,10 @@
         </fieldset>
 
         <input class="govuk-input" name="kbvNum" type="hidden" value="{{ code }}">
-        <button id="button" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</button>
+        <br>
+        <a href="/identity/pyi/mvp/identity-proved.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Continue
+        </a>
       </form>
       <p><a class="govuk-link" href="#">I cannot answer this question</a></p>
     </div>
