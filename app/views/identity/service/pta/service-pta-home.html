@@ -19,7 +19,7 @@ Personal tax account - Home
 
     <header class="hmrc-page-heading">
       <h1 class="govuk-heading-xl">{{ data['first-name'] or 'Firstname' }} {{ data['middle-names'] }} {{ data['surname'] or 'Surname' }}</h1>
-      <p class="hmrc-caption govuk-caption-xl"><span class="govuk-visually-hidden">This section is </span>Account home</p>
+      <p class="hmrc-caption govuk-caption-xl"><span class="govuk-visually-hidden">This section is </span>Personal tax home</p>
     </header>
 
     <div class="pta-card-container">
@@ -66,4 +66,10 @@ Personal tax account - Home
   </div>
 
 </div>
+
+{{ govukButton({
+  text: "Return to tasks",
+  href: "/identity/index.html"
+}) }}
+
 {% endblock %}

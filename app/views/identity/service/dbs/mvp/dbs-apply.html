@@ -1,0 +1,70 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+Prove your identity with GOV.UK Verify
+{% endblock %}
+
+{% block header %}
+{% include "../../_includes/header-dbs-r7.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  <!--<a class="govuk-back-link" href="dbs-opt-in">Back</a>-->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/service/verify/v1/verify-start" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Apply for a basic DBS check
+      </h1>
+
+      <p>This takes about 15 to 20 minutes. </p>
+
+      <p>You’ll be asked to provide personal information, such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>all your addresses for the last 5 years and the dates you lived there</li>
+        <li>your National Insurance number</li>
+        <li>your driving licence (if you have one)</li>
+      </ul>
+
+      <p>Some of the information you provided as part of proving your identity may be reused so you do not have to give the same details again.</p>
+
+      {{ govukCheckboxes({
+      idPrefix: "id-documents",
+      name: "dbs-accept",
+      classes: "govuk-checkboxes--small",
+      fieldset: {
+      },
+      items: [
+        {
+          value: "dbs-accept-privacy",
+          html: "By continuing you agree that you have read and understood the basic DBS check privacy policy (opens in a new tab). I understand how the DBS will process my personal data when I’m applying online, before my application has been submitted.",
+          checked:  checked("dbs-accept", "dbs-accept-privacy")
+        }
+      ]
+    }) }}
+
+    <a href="/identity/task-1-finish.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
+      Continue
+    </a>
+
+    
+
+
+    </form>
+
+  </div>
+
+</div>
+{% endblock %}
