@@ -4,6 +4,14 @@
 Enter your email address
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
 
 {% block beforeContent %}
     <a class="govuk-back-link" href="gov-account">Back</a>

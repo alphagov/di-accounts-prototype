@@ -4,6 +4,15 @@
 Check your phone
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">

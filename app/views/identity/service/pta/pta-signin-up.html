@@ -5,13 +5,13 @@ Personal tax account: sign in or set up
 {% endblock %}
 
 {% block header %}
-{# Set serviceName in config.js. #}
   {{ govukHeader({
-    homepageUrl: "/",
+    homepageUrl: "/identity/index",
+    serviceName: "",
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
-  {% endblock %}
+{% endblock %}
 
 {% block beforeContent %}
 <div class="govuk-breadcrumbs">

@@ -4,6 +4,15 @@
 Sign in to your GOV.UK One Login
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 {% block beforeContent %}
     <a href="gov-account-2" class="govuk-back-link">Back</a>
 {% endblock %}

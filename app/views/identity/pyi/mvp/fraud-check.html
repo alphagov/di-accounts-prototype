@@ -5,7 +5,12 @@ We need to check your details
 {% endblock %}
 
 {% block header %}
-{% include "../_includes/header_r10.html" %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}

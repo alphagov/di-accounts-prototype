@@ -4,6 +4,14 @@
 Request a basic DBS check
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
 
 {% block beforeContent %}
 <div class="govuk-breadcrumbs">

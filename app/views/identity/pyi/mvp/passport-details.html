@@ -5,7 +5,12 @@ Enter your details exactly as they appear on your UK passport
 {% endblock %}
 
 {% block header %}
-{% include "../_includes/header_mvp.html" %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}

@@ -1,9 +1,17 @@
 {% extends "childcare/layout.html" %}
 
 {% block pageTitle %}
-Request a basic DBS check
+Sign in to your GOV.UK One Login
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
 
 {% block beforeContent %}
 <div class="govuk-breadcrumbs">
@@ -89,7 +97,7 @@ Request a basic DBS check
     </div>
 
     <div class="govuk-inset-text">
-      <p>If you’re looking for a different service,<a href="">sign in to another government account.</a>.</p>
+      <p>If you’re looking for a different service,<a href="https://gov.uk/sign-in">sign in to another government account</a>.</p>
     </div>
 
     <h2 class="govuk-heading-m">Sign in to your GOV.UK One Login</h2>

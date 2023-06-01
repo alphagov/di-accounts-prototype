@@ -4,6 +4,15 @@
 Check your phone
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 {% block beforeContent %}
 <a class="govuk-back-link" href="create-otp-sms">Back</a>
 {% endblock %}

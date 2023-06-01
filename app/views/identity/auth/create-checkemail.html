@@ -4,6 +4,15 @@
 Check your email
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 {% block beforeContent %}
 <a class="govuk-back-link" href="create-email">Back</a>
 {% endblock %}

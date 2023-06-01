@@ -6,6 +6,15 @@
 Sign in or create a GOV.UK account
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 
 {% block beforeContent %}
   {% if data['use-govuk-account'] %}
