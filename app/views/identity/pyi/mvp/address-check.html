@@ -18,7 +18,9 @@ Confirm your details
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
   </p>
-</div>{% endblock %}
+</div>
+
+{% endblock %}
 
 {% block content %}
 
@@ -172,9 +174,10 @@ Confirm your details
       <input class="govuk-input" id="lived" name="lived-3" type="hidden" value="yes">
       {% endif %}
 
-      <button class="govuk-button" type="submit" data-module="govuk-button">
-        I confirm my details are correct
-      </button>
+      {{ govukButton({
+        text: "I confirm my details are correct",
+        href: "/identity/pyi/mvp/fraud-check.html"
+      }) }}
 
     </form>
 
