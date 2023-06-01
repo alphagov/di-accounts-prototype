@@ -1,0 +1,27 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">End of task 1</h1>
+
+<p>We’ve removed the steps that the DBS service requires for this research session. </p>
+
+<p class="govuk-body">Imagine that you have submitted the following in order to receive a basic criminal record check:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>all your addresses for the last 5 years and the dates you lived there</li>
+  <li>your National Insurance number</li>
+  <li>your driving licence (if you have one)</li>
+</ul>
+
+{{ govukButton({
+  text: "Return to tasks",
+  href: "/identity/index.html"
+}) }}
+
+
+
+{% endblock %}
