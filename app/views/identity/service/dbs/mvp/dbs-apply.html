@@ -40,20 +40,18 @@ Prove your identity with GOV.UK Verify
 
       <p>Some of the information you provided as part of proving your identity may be reused so you do not have to give the same details again.</p>
 
-      {{ govukCheckboxes({
-      idPrefix: "id-documents",
-      name: "dbs-accept",
-      classes: "govuk-checkboxes--small",
-      fieldset: {
-      },
-      items: [
-        {
-          value: "dbs-accept-privacy",
-          html: "By continuing you agree that you have read and understood the basic DBS check privacy policy (opens in a new tab). I understand how the DBS will process my personal data when I’m applying online, before my application has been submitted.",
-          checked:  checked("dbs-accept", "dbs-accept-privacy")
-        }
-      ]
-    }) }}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                By continuing you agree that you have read and understood the <a href="#" class="govuk-link">basic DBS check privacy policy (opens in a new tab)</a> . I understand how the DBS will process my personal data when I’m applying online, before my application has been submitted.
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
     <a href="/identity/task-1-finish.html" role="button" draggable="false" class="govuk-button govuk-button--continue" data-module="govuk-button">
       Continue
