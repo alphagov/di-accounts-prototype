@@ -5,12 +5,7 @@ Answer security questions
 {% endblock %}
 
 {% block header %}
-  {{ govukHeader({
-    homepageUrl: "/identity/index",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+{% include "includes/service-header-pta.html" %}
 {% endblock %}
 
 {% block beforeContent %}
