@@ -16,7 +16,7 @@ Share your saved identity information
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-  <div class="summary-list-container">
+  <div class="summary-list-container govuk-!-margin-bottom-4">
     <h1 class="govuk-heading-l">Share your saved identity information </h1>
     <p class="govuk-body">You proved your identity with GOV.UK One Login on 3 May 2023.</p>
     <p>This will be shared with <span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
@@ -58,6 +58,8 @@ Share your saved identity information
     </dl>
   </div>
   <br>
+
+  <!--
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -83,15 +85,27 @@ Share your saved identity information
       </div>
     </fieldset>
   </div>
+-->
+
+
   </div>
+  <h2 class="govuk-heading-m">
+    Do you want to continue with this information?
+  </h2>
+  {{ govukButton({
+    text: "Yes, share this information with Personal tax account",
+    href: "/identity/service/pta/what-is-your-ni"
+  }) }}
+  
+  {{ govukButton({
+    text: "No, contact the GOV.UK One Login team to update this information",
+    href: "/identity/pyi/update-info-q",
+    classes: "govuk-button--secondary"
+  }) }}
   <div>
 
   </div>
   <div>
-    {{ govukButton({
-      text: "Continue",
-      href: "/identity/pyi/update-info-q.html"
-    }) }}
   </div>
 </div>
 
