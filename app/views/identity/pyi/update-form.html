@@ -28,27 +28,15 @@ Share your saved identity information
     </div>
 
     <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h2 class="govuk-fieldset__heading">
-            Can we reply to you by email?
-          </h2>
-        </legend>
-        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-      </fieldset>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          What's your email address?
+        </label>
+      </h1>
+      <div id="event-name-hint" class="govuk-hint">
+        We’ll get back to you within 2 working days
+      </div>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
     </div>
 
   <div>
