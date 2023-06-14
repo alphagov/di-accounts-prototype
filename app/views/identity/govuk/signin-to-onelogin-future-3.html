@@ -1,0 +1,117 @@
+{% extends "childcare/layout.html" %}
+
+{% block pageTitle %}
+Sign in to your GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/identity/index",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Home</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Sign in to your GOV.UK One Login
+    </h1>
+
+    <p class="govuk-body">Contents</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="/identity/govuk/signin-to-onelogin-future-1.html">About GOV.UK One Login</a></li>
+  <li><a class="govuk-link" href="/identity/govuk/signin-to-onelogin-future-2.html">Services you can use with GOV.UK One Login</a></li>
+  <li>How to prove your identity with GOV.UK One Login</li>
+</ul>
+    </ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <div>
+      <h2 class="govuk-heading-m">How to prove your identity with GOV.UK One Login </h2>
+      <p class="govuk-body">When you prove your identity with GOV.UK One Login, your identity information is saved automatically. This means  you won’t have to prove your identity again next time a service needs to check who you are.</p>
+      <p class="govuk-body">If you’ve already proved your identity you can <a href="#" class="govuk-link">sign in to view and update your saved identity information</a>.</p>
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">
+        Ways to prove your identity
+      </h2>
+
+      <p class="govuk-body">There are 3 ways of proving your identity with GOV.UK One Login:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>online with the GOV.UK ID check app</li>
+        <li>online by answering security questions </li>
+        <li>in person at a Post Office</li>
+      </ul>
+      <p>The method you use will depend on your device and which identity documents you have.</p>
+    </div>
+
+    <div>
+      <h3 class="govuk-heading-s">Online with the GOV.UK ID check app</h3>
+      <p>You’ll need access to a smartphone or tablet with a camera.</p>
+      <p>You also need to have one of the following ID documents:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK on non-UK biometric passport</li>
+        <li>UK driving licence</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Online by  answering security questions</h3>
+      <p>You’ll have to ask some security questions about things like your mobile phone contract, bank accounts, credit cards, loans or mortgages you may have.</p>
+      <p>You also need to have one of the following ID documents:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK passport</li>
+        <li>UK driving licence</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">In person at a Post Office</h3>
+      <p>This option takes longer. You’ll usually get an outcome within a day of going to the Post Office.</p>
+      <p>You’ll be asked to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>enter details from your photo ID on GOV.UK </li>
+        <li>go a Post Office where they’ll scan your ID and take a photo of your face</li>
+      </ul>
+      <br>
+      <p>You need to have one of the following ID documents:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a passport from any country</li>
+        <li>a UK or EU driving licence with your photo on it</li>
+        <li>a biometric residence permit (BRP)</li>
+        <li>an identity card from a European Economic Area (EEA) country, except Denmark, Iceland or Ireland
+        </li>
+      </ul>
+
+    </div>
+    <br>
+    <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/identity/govuk/signin-to-onelogin-future-2.html" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Services you can use with GOV.UK One Login</span></a>
+      </div>
+    </nav>
+        </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+
