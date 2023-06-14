@@ -1,0 +1,147 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Share your saved identity information 
+{% endblock %}
+
+{% block header %}
+{% include "includes/service-header-pta.html" %}
+<!-- PTA grey header
+<div style="background-color: #f3f2f1; border-bottom: 1px solid	#b1b4b6;">
+    <p class="govuk-heading-s govuk-width-container govuk-!-padding-top-3">Personal tax account</span></p>
+</div>-->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="summary-list-container govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-l">Share other information saved in your GOV.UK One Login</h1>
+    <p>You can share more of the information saved in your GOV.UK One Login with<span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
+    <p>This is so you do not have to enter it again.</p>
+    <p>You gave this information when you proved your identity with GOV.UK One Login.</p>
+    <p>If it is out of date, you can choose not to share it and enter it when you use the service instead.</p>
+
+    <h2 class="govuk-heading-m">Do you want to share these addresses?</h2>
+
+  
+  <div class="id-info">
+    <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+        <dd class="govuk-summary-list__value">
+          <p>Current address</p>
+          <p>1 Street<br>Bristol<br>BS5 6LA</p>
+          <p>Previous address 1</p>
+          <p>2 Street<br>Bristol<br>BS5 6LA</p>
+          <p>Previous address 2</p>
+          <p>3 Street<br>Bristol<br>BS5 6LA</p>
+
+        </dd>
+      </div>
+
+    </dl>
+  </div>
+  <br>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      </legend>
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+          <label class="govuk-label govuk-radios__label" for="changed-name">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <h2 class="govuk-heading-m">Do you want to share these passport details?</h2>
+    <div class="id-info">
+      <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <p>Passport number:<br> 123456789</p>
+          <p>Country:<br> UK</p>
+          <p>Expiry date:<br> 27 May 2028</p>
+        </dd>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      </legend>
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+          <label class="govuk-label govuk-radios__label" for="changed-name">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  
+
+  <br>
+
+  <div>
+    {{ govukButton({
+      text: "Continue",
+      href: "/identity/service/pta/what-is-your-ni.html"
+    }) }}
+  </div>
+</div>
+  <!--
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-heading-m">
+          Do you want to continue with this information?
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+            Yes, share this information with Personal tax account
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            No, contact the GOV.UK One Login team to update this information
+          </label>
+          <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            Your information will be deleted and you’ll need to prove your identity again.
+        </div>
+      </div>
+    </fieldset>
+  </div>
+-->
+
+  
+  
+</div>
+
+{% endblock %}
