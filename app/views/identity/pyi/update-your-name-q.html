@@ -17,40 +17,39 @@ Share your saved identity information
   <div class="govuk-grid-column-two-thirds">
 
   <div class="summary-list-container govuk-!-margin-bottom-4">
-    <h1 class="govuk-heading-l">Share your proof of identity</h1>
-    <p class="govuk-body">You proved your identity with GOV.UK One Login on 3 May 2023.</p>
-    <p>This will be shared with <span class="govuk-!-font-weight-bold"> Personal tax account</span>.</p>
-  
-  <div class="id-info">
-    <h3 class="govuk-heading-m ">Identity information that will be shared </h3>
-    <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
-        <dt class="govuk-summary-list__key">
-          Name on your passport 
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['first-name'] or 'Firstname' }} {{ data['middle-names'] }} {{ data['surname'] or 'Surname' }}
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row govuk-summary-list__row--no-border" >
-        <dt class="govuk-summary-list__key">
-          Date of birth
-        </dt>
-        <dd class="govuk-summary-list__value">
-          10 October 1970
-        </dd>
-      </div>
-    </dl>
-  </div>
-  <br>
+    <h1 class="govuk-heading-l">Are you sure you want to update the name saved in your GOV.UK One Login?</h1>
+    <p class="govuk-body">At the moment, updating the name saved in your GOV.UK One Login can take up to 5 working days.</p>
+    <p>You’ll need to contact the GOV.UK One Login team using an online form. </p>
+    <p>They will delete your identity information and you’ll need to prove your identity again. </p>
 
-  <div>
-    {{ govukButton({
-      text: "Continue",
-      href: "/identity/pyi/pyi-online.html"
-    }) }}
-  </div>
+    <div class="govuk-inset-text">
+      You need to have a UK passport or driving licence under your new name to change it in your GOV.UK One Login.
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">If you need to use the service now</h2>
+      <p>GOV.UK One Login can still confirm your identity and you can access the service without updating your name.</p>
+      <p>However, the service will be given the name currently saved in your GOV.UK One Login.</p>
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">Do you want to update your name?</h2>
+      {{ govukButton({
+        text: "Yes, contact the GOV.UK One Login team to update your name",
+        href: "/identity/service/pta/what-is-your-ni",
+        classes: "govuk-button--secondary"
+        
+      }) }}
+      
+      {{ govukButton({
+        text: "No, continue  without updating your name",
+        href: "/identity/pyi/update-info-q",
+        classes: "govuk-button--secondary"
+      }) }}
+    
+    </div>
+
+
 </div>
   <!--
   <div class="govuk-form-group">
@@ -79,12 +78,6 @@ Share your saved identity information
     </fieldset>
   </div>
 -->
-
-<h2 class="govuk-heading-m">If you’ve changed your name</h2>
-<p>If you want GOV.UK One Login to share a different name with services, you can <a href="/identity/pyi/update-your-name-q.html" class="govuk-link govuk-link--no-visited-state">contact the GOV.UK One Login team to update it</a>.</p>
-<p>Your identity information will be deleted and you’ll need to prove your identity again.</p>
-
-
   
   
 </div>
