@@ -45,19 +45,17 @@ Share your saved identity information
   </div>
   <br>
   <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      </legend>
-      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-          <label class="govuk-label govuk-radios__label" for="changed-name">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
             Yes
           </label>
         </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
             No
           </label>
         </div>
@@ -79,27 +77,25 @@ Share your saved identity information
     </div>
 
   </div>
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      </legend>
-      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-          <label class="govuk-label govuk-radios__label" for="changed-name">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
-            No
-          </label>
-        </div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Yes
+        </label>
       </div>
-    </fieldset>
-  </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
   
 
