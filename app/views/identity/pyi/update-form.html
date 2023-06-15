@@ -10,33 +10,27 @@ Share your saved identity information
 <div style="background-color: #f3f2f1; border-bottom: 1px solid	#b1b4b6;">
     <p class="govuk-heading-s govuk-width-container govuk-!-padding-top-3">Personal tax account</span></p>
 </div>-->
+
 {% endblock %}
 
 {% block content %}
+<a href="/identity/pyi/update-your-name-q.html" class="govuk-back-link">Back</a>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
   <div class="summary-list-container govuk-!-margin-bottom-4">
+    
     <h1 class="govuk-heading-l">Update your GOV.UK One Login identity information</h1>
     <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper">
+      <h2 class="govuk-label-wrapper">
         <label class="govuk-label govuk-label--m" for="more-detail">
           What information do you want to update?
         </label>
-      </h1>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
-    </div>
-
-    <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper">
-        <label class="govuk-label govuk-label--m" for="event-name">
-          What's your email address?
-        </label>
-      </h1>
-      <div id="event-name-hint" class="govuk-hint">
+      </h2>
+      <div id="more-detail-hint" class="govuk-hint">
         We’ll get back to you within 2 working days
       </div>
-      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
     </div>
 
   <div>
