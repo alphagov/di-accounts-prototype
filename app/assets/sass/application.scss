@@ -93,6 +93,7 @@
 
     // account header
 
+
     @media only screen and (min-width: 770px){
       .govuk-header--service-nav-mobile {
         display: none;
@@ -117,6 +118,31 @@
 
      .account-menu-icon-toggle {
        rotate: 180deg;
+     }
+
+     // account header identity round overrides
+
+
+     .account-header-identity-list {
+      list-style: none;
+      padding-top: 10px;
+      padding-left: 0;
+      margin-top: 0;
+     }
+
+     .account-header-identity-item {
+      display: inline;
+      margin-right: 15px;
+      padding-bottom: 10px;
+     }
+
+     .account-header-identity-link {
+      text-decoration: none;
+      color: #505A5F;
+     }
+
+     .account-header-identity-item--active {
+      border-bottom: 5px solid #1d70b8;
      }
 
      // settings and security

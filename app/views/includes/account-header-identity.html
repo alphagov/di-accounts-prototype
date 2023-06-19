@@ -21,14 +21,37 @@
     </div>
   </div>
 </header>
-<!--DESKTOP-->
+
+<div class="govuk-header--service-nav">
+  <div class="govuk-width-container">
+        <nav aria-label="Menu" class="account-header-identity">
+          <ul id="navigation" class="account-header-identity-list">
+            <li class="account-header-identity-item {% if activeServiceNavItem == "payg-home" %} account-header-identity-item--active {% endif %}">
+                <a class="govuk-!-font-weight-bold govuk-!-font-size-19 account-header-identity-link govuk-link--no-visited-state" href="account-home">
+                Your services
+                </a>
+            </li>
+            <li class="account-header-identity-item {% if activeServiceNavItem == "your-details" %} account-header-identity-item--active {% endif %}">
+                <a class="govuk-!-font-weight-bold govuk-!-font-size-19 account-header-identity-link govuk-link--no-visited-state" href="settings">
+                Security
+                </a>
+            </li>
+            <li class="account-header-identity-item {% if activeServiceNavItem == "" %}account-header-identity-item--active {% endif %}">
+                <a class="govuk-!-font-weight-bold govuk-!-font-size-19 account-header-identity-link govuk-link--no-visited-state" href="/">
+                Sign out
+                </a>
+          </li>
+          </ul>
+        </nav>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+
+<!--DESKTOP
 <div class="govuk-header--service-nav govuk-header--service-nav-desktop">
   <div class="govuk-width-container">
     <div class="govuk-header__content govuk-header__content--service-nav" data-module="govuk-header">
         <nav aria-label="Menu" class="govuk-header__navigation govuk-header__navigation--service-nav">
-          <!--
-          <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" aria-expanded="false"></button>
-          -->
           <ul id="navigation" class="govuk-header__navigation-list">
             <li class="govuk-header__navigation-item {% if activeServiceNavItem == "payg-home" %} govuk-header__navigation-item--active {% endif %}">
                 <a class="govuk-header__link" href="account-home">
@@ -51,8 +74,8 @@
   </div>
   <hr class="govuk-section-break govuk-section-break--visible">
 </div>
-
-<!--MOBILE-->
+--> 
+<!--MOBILE
 <div class="govuk-header--service-nav govuk-header--service-nav-mobile">
   <div class="govuk-width-container">
     <div class="govuk-header__content govuk-header__content--service-nav" data-module="govuk-header">
@@ -102,3 +125,4 @@
     }
   }
   </script>
+  -->
