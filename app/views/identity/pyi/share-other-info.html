@@ -28,10 +28,9 @@ Share your saved identity information
   
   <div class="id-info">
     <h3 class="govuk-heading-s">Address history</h3>
-    <hr class="govuk-section-break govuk-section-break--visible">
     <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
     <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dd class="govuk-summary-list__value">
           <p>Current address</p>
           <p>1 Street<br>Bristol<br>BS5 6LA</p>
@@ -47,17 +46,20 @@ Share your saved identity information
   </div>
   <br>
   <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        Do you want to share these addresses?
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="address">
             Yes
           </label>
         </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="address-2" name="address" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="address-2">
             No
           </label>
         </div>
@@ -70,9 +72,8 @@ Share your saved identity information
     <div class="id-info">
 
     <h3 class="govuk-heading-s">Passport details</h3>
-    <hr class="govuk-section-break govuk-section-break--visible">
       <!--<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">--> 
-      <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row  govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
         <dd class="govuk-summary-list__value">
           <p>Passport number:<br> 123456789</p>
           <p>Country:<br> UK</p>
@@ -84,17 +85,20 @@ Share your saved identity information
   </div>
 <br>
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Do you want to share these passport details?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="passport" name="passport" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="passport">
           Yes
         </label>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="passport-2" name="passport" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="passport-2">
           No
         </label>
       </div>
