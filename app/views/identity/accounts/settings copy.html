@@ -1,0 +1,132 @@
+{% extends "../../layouts/layout-account.html" %}
+
+{% set showServiceNav = "true" %}
+{% set activeServiceNavItem = "your-details" %}
+{% set round = "round2" %}
+
+{% block pageTitle %}
+  GOV.UK One Login - Settings
+{% endblock %}
+
+{% block header %}
+{% include "includes/account-header-identity.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Security
+    </h1>
+    
+    <div class="activity-card govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">Your sign in details</h2>
+      
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['emailAddress'] or 'your.name@example.com' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+        <dt class="govuk-summary-list__key">
+          Password
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ••••••••••••••••
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="change-password-1.html">
+            Change<span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  <div class="activity-card govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">How you get security codes</h2>
+  <p>We use security codes to make sure it’s you when you sign in.</p> 
+  <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+    <div class="govuk-summary-list__row" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+      <dt class="govuk-summary-list__key">
+        Text message
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Phone number<br> ending with 0406
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <p><a class="govuk-link" href="#">
+          Update phone number
+        </a></p>
+        <p><a class="govuk-link" href="#">
+          Replace this method
+        </a></p>
+      </dd>
+    </div>
+  </dl>
+    <h3 class="govuk-heading-s govuk-!-margin-top-4">Your recovery method</h3>
+    <p>If you cannot get a code your usual way, you can use your recovery method instead.</p>
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border" style="border-top: 1px solid #b1b4b6; padding-top:10px">
+        <dt class="govuk-summary-list__key">
+          Text message
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Phone number<br> ending with 8770
+        </dd>
+        <dd class="govuk-summary-list__value">
+          <p><a class="govuk-link" href="#">
+            Make default 
+          </a></p>
+          <p><a class="govuk-link" href="#">
+            Remove
+          </a></p>
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  
+
+  <div class="activity-card govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Your proof of identity</h2>
+    <p class="govuk-body">See the information you used to prove your identity with GOV.UK One Login.</p>
+    <p class="govuk-body govuk-!-margin-bottom-0"><a href="id-info" class="govuk-link--no-visited-state">See your saved identity information</a></p>
+  </div>
+
+  <div class="activity-card govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Sign in history</h2>
+    <p class="govuk-body">See when you’ve signed in to your GOV.UK One Login and what services you visited.</p>      
+    <p class="govuk-!-margin-bottom-0"><a href="/activity/account/account-activity-filter.html" class="govuk-link--no-visited-state">See your sign in history</a></p>
+  </div>
+
+  <div class="activity-card govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Delete your GOV.UK One Login</h2>
+    <p class="govuk-body">This will permanently delete your GOV.UK One Login. You’ll no longer be able to sign in to the services you’ve used with it.</p>
+    <p class="govuk-body govuk-!-margin-bottom-0"><a href="account-delete" class="govuk-link--no-visited-state">Delete your GOV.UK One Login</a></p>
+  </div>
+
+  </div>
+</div>
+
+{% endblock %}
